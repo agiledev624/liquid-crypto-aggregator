@@ -220,7 +220,7 @@ const styles = theme => ({
     backgroundColor: theme.palette.background.secondary,
     color: '#fff',
     '&:hover': {
-      backgroundColor: theme.palette.background.border,
+      backgroundColor: theme.palette.background.primary,
     },
     [theme.breakpoints.up('md')]: {
       width: '180px',

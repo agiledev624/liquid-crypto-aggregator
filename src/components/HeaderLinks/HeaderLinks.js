@@ -69,8 +69,8 @@ const HeaderLinks = ({
             </>
           ) : (
             <>
-              <i className={classes.icon + ' far fa-question-circle'} />
-              {t('Vault-Wallet')}
+              {/* <i className={classes.icon + ' far fa-question-circle'} /> */}
+              {t('Network-ConnectWallet')}
             </>
           )}
         </Button>

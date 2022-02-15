@@ -4,12 +4,13 @@ const appStyle = theme => ({
   '@global': {
     'html,body': {
       // backgroundColor: theme.palette.background.default,
-      backgroundImage: 'linear-gradient(#1e1e2f,#1e1e24)',
+      // backgroundImage: 'linear-gradient(#1e1e2f,#1e1e24)',
     },
   },
   page: {
     // backgroundColor: theme.palette.background.default,
-    backgroundImage: 'linear-gradient(#1e1e2f,#1e1e24)',
+    // backgroundImage: 'linear-gradient(#1e1e2f,#1e1e24)',
+    background: 'linear-gradient(7.61deg, #030C3A 6.14%, #071C82 93%)',
     minHeight: '100vh',
     position: 'relative',
     overflow: 'hidden',

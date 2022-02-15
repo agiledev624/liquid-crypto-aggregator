@@ -75,7 +75,7 @@ const Filters = ({
 
   return (
     <Grid container spacing={2} className={classes.container}>
-      <Grid item xs={6} sm={4} md={3}>
+      <Grid item xs={6} sm={6} md={6}>
         <Button className={classes.reset} onClick={resetFilter}>
           {t('Filters-Reset')}
         </Button>
@@ -95,7 +95,7 @@ const Filters = ({
         </FormControl>
       </Grid>
 
-      <Grid item xs={6} sm={4} md={3}>
+      {/* <Grid item xs={6} sm={4} md={3}>
         <FormControl>
           <FormControlLabel
             className={classes.label}
@@ -110,9 +110,9 @@ const Filters = ({
             label={t('Retired-Vaults')}
           />
         </FormControl>
-      </Grid>
+      </Grid> */}
 
-      <Grid item xs={6} sm={4} md={3}>
+      <Grid item xs={6} sm={6} md={6}>
         <FormControl>
           <FormControlLabel
             className={classes.label}
@@ -129,7 +129,7 @@ const Filters = ({
         </FormControl>
       </Grid>
 
-      <Grid item xs={6} sm={4} md={3}>
+      {/* <Grid item xs={6} sm={4} md={3}>
         <FormControl>
           <FormControlLabel
             className={classes.label}
@@ -148,7 +148,7 @@ const Filters = ({
             }
           />
         </FormControl>
-      </Grid>
+      </Grid> */}
 
       <Grid item xs={6} sm={4} md={3}>
         <FormControl className={classes.selectorContainer}>

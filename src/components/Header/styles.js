@@ -16,15 +16,18 @@ import {
 
 const styles = theme => ({
   appBar: {
+    // background: 'linear-gradient(7.61deg, #030C3A 6.14%, #071C82 93%)',
+    boxShadow: 'rgb(0 0 0 / 35%) 0px 5px 15px !important',
     display: 'flex',
     border: '0',
     borderRadius: '3px',
     padding: '0.625rem 0',
     marginBottom: '20px',
     color: grayColor[15],
-    width: 'calc(100% - 20px)',
+    width: '100%',
     margin: '0 auto',
-    backgroundColor: whiteColor,
+    // backgroundColor: blackColor,
+    background: blackColor,
     boxShadow:
       '0 4px 18px 0px rgba(' +
       hexToRgb(blackColor) +
@@ -75,6 +78,10 @@ const styles = theme => ({
     },
     '& a': {
       marginLeft: '8px',
+    },
+    '& span': {
+      display: 'flex',
+      alignItems: 'center',
     },
   },
   appResponsive: {
@@ -149,7 +156,8 @@ const styles = theme => ({
   },
   dark: {
     color: whiteColor,
-    backgroundColor: theme.palette.background.default,
+    // backgroundColor: theme.palette.background.default,
+    backgroundColor: blackColor,
     boxShadow: '0px 0px',
   },
   white: {

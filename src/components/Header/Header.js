@@ -50,18 +50,18 @@ const Header = ({ links, isNightMode, setNightMode }) => {
               <img
                 alt="BIFI"
                 // src={require(`images/BIFI-logo.svg`)}
-                src={require(`images/company-logo.png`)}
-                height={'40px'}
+                src={require(`images/main-logo.svg`)}
+                height={'50px'}
                 className={classes.logo}
               />
               {/* beefy.finance */}
-              Aggregator
+              Stake and Farm
             </Hidden>
             <Hidden smUp>
               <img
                 alt="BIFI"
                 // src={require(`images/BIFI-logo.svg`)}
-                src={require(`images/company-logo.png`)}
+                src={require(`images/main-logo.svg`)}
                 height={'35px'}
                 className={classes.logo}
               />
