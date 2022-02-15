@@ -1,6 +1,7 @@
 const styles = theme => ({
   notice: {
-    backgroundColor: theme.palette.background.secondary,
+    backgroundColor: theme.palette.background.primary,
+    boxShadow: 'rgb(0 0 0 / 35%) 0px 5px 15px !important',
     padding: 25,
     marginBottom: 25,
     textAlign: 'center',
