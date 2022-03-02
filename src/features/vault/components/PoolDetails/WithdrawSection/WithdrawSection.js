@@ -378,7 +378,7 @@ const WithdrawSection = ({ pool, index, sharesBalance }) => {
               <div className={classes.showDetailButtonCon}>
                 <Button
                   className={`${classes.showDetailButton} ${classes.showDetailButtonContained}`}
-                  // onClick={handleApproval}
+                  onClick={handleApproval}
                   disabled={fetchApprovalPending[pool.earnedToken]}
                 >
                   {fetchApprovalPending[pool.earnedToken]
@@ -395,7 +395,7 @@ const WithdrawSection = ({ pool, index, sharesBalance }) => {
                   disabled={
                     withdrawSettings.amount.isZero() || fetchZapEstimatePending[pool.tokenAddress]
                   }
-                  // onClick={handleWithdraw}
+                  onClick={handleWithdraw}
                 >
                   {fetchWithdrawPending[index]
                     ? `${t('Vault-Withdrawing')}`
@@ -407,7 +407,7 @@ const WithdrawSection = ({ pool, index, sharesBalance }) => {
                     type="button"
                     color="primary"
                     disabled={sharesBalance.isZero()}
-                    // onClick={handleWithdrawAll}
+                    onClick={handleWithdrawAll}
                   >
                     {fetchWithdrawPending[index]
                       ? `${t('Vault-Withdrawing')}`

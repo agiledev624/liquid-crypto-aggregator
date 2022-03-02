@@ -7,6 +7,7 @@ import {
   VAULT_FETCH_BIFIBUYBACK_FAILURE,
 } from './constants';
 import { getApiCacheBuster } from '../../web3/getApiCacheBuster';
+import { apiUrl } from 'features/helpers/getApiInfo';
 
 export function fetchBifibuyback() {
   return dispatch => {
@@ -16,7 +17,7 @@ export function fetchBifibuyback() {
 
     return new Promise((resolve, reject) => {
       const cacheBuster = getApiCacheBuster();
-      const doRequest = axios.get(`https://api.beefy.finance/bifibuyback?_=${cacheBuster}`);
+      const doRequest = axios.get(`${apiUrl}/bifibuyback?_=${cacheBuster}`);
 
       doRequest.then(
         res => {

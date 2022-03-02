@@ -2,7 +2,7 @@ import axios from 'axios';
 
 import { getNetworkPools, launchpools } from '../helpers/getNetworkData';
 import { getApiCacheBuster } from './getApiCacheBuster';
-
+import { apiUrl } from 'features/helpers/getApiInfo';
 const pools = getNetworkPools();
 
 const CACHE_TIMEOUT_MS = 1 * 60 * 1000; // 1 minute(s)
@@ -30,7 +30,7 @@ const fetchTokens = async () => {
   const cacheBuster = getApiCacheBuster();
 
   try {
-    const response = await axios.get(`https://api.beefy.finance/prices?_=${cacheBuster}`);
+    const response = await axios.get(`${apiUrl}/prices?_=${cacheBuster}`);
     return response.data;
   } catch (err) {
     console.error(err);
@@ -42,7 +42,7 @@ const fetchLPs = async () => {
   const cacheBuster = getApiCacheBuster();
 
   try {
-    const response = await axios.get(`https://api.beefy.finance/lps?_=${cacheBuster}`);
+    const response = await axios.get(`${apiUrl}/lps?_=${cacheBuster}`);
     return response.data;
   } catch (err) {
     console.error(err);

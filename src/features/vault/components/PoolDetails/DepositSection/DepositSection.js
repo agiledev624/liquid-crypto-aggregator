@@ -371,7 +371,7 @@ const DepositSection = ({ pool }) => {
             <div className={classes.showDetailButtonCon}>
               <Button
                 className={`${classes.showDetailButton} ${classes.showDetailButtonContained}`}
-                // onClick={handleApproval}
+                onClick={handleApproval}
                 disabled={pool.depositsPaused || fetchApprovalPending[depositSettings.token.symbol]}
               >
                 {fetchApprovalPending[depositSettings.token.symbol]
@@ -391,7 +391,7 @@ const DepositSection = ({ pool }) => {
                   depositSettings.amount.isZero() ||
                   tokenBalance(depositSettings.token.symbol).isZero()
                 }
-                // onClick={handleDepositAmount}
+                onClick={handleDepositAmount}
               >
                 {t('Vault-DepositButton')}
               </Button>
@@ -403,7 +403,7 @@ const DepositSection = ({ pool }) => {
                     fetchDepositPending[pool.earnContractAddress] ||
                     tokenBalance(depositSettings.token.symbol).isZero()
                   }
-                  // onClick={handleDepositAll}
+                  onClick={handleDepositAll}
                 >
                   {t('Vault-DepositButtonAll')}
                 </Button>

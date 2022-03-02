@@ -27,13 +27,14 @@ const styles = theme => ({
     width: '100%',
     margin: '0 auto',
     // backgroundColor: blackColor,
-    background: blackColor,
-    boxShadow:
-      '0 4px 18px 0px rgba(' +
-      hexToRgb(blackColor) +
-      ', 0.12), 0 7px 10px -5px rgba(' +
-      hexToRgb(blackColor) +
-      ', 0.15)',
+    // background: blackColor,
+    background: '#0c154e',
+    // boxShadow:
+    //   '0 4px 18px 0px rgba(' +
+    //   hexToRgb(blackColor) +
+    //   ', 0.12), 0 7px 10px -5px rgba(' +
+    //   hexToRgb(blackColor) +
+    //   ', 0.15) !important',
     transition: 'all 150ms ease 0s',
     alignItems: 'center',
     flexFlow: 'row nowrap',
@@ -157,7 +158,7 @@ const styles = theme => ({
   dark: {
     color: whiteColor,
     // backgroundColor: theme.palette.background.default,
-    backgroundColor: blackColor,
+    // backgroundColor: blackColor,
     boxShadow: '0px 0px',
   },
   white: {
