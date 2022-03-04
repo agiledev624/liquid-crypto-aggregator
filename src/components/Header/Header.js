@@ -48,7 +48,7 @@ const Header = ({ links, isNightMode, setNightMode }) => {
           <Button className={classes.title}>
             <Hidden xsDown>
               <img
-                alt="BIFI"
+                alt="LOGO"
                 // src={require(`images/BIFI-logo.svg`)}
                 src={require(`images/main-logo.svg`)}
                 height={'50px'}
@@ -59,7 +59,7 @@ const Header = ({ links, isNightMode, setNightMode }) => {
             </Hidden>
             <Hidden smUp>
               <img
-                alt="BIFI"
+                alt="LOGO"
                 // src={require(`images/BIFI-logo.svg`)}
                 src={require(`images/main-logo.svg`)}
                 height={'35px'}

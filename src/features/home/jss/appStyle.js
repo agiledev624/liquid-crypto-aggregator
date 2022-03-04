@@ -4,7 +4,8 @@ import { container } from 'assets/jss/material-kit-pro-react.js';
 const appStyle = theme => ({
   '@global': {
     body: {
-      background: 'none',
+      // background: 'none',
+      background: 'radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%)',
       // backgroundColor: theme.palette.background.default,
       // backgroundImage: 'linear-gradient(#1e1e2f,#1e1e24)',
     },
