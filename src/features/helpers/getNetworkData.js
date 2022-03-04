@@ -116,28 +116,28 @@ export const getNetworkPools = () => {
   switch (window.REACT_APP_NETWORK_ID) {
     case 56:
       return bscPools;
-    case 128:
-      return hecoPools;
-    case 43114:
-      return avalanchePools;
-    case 137:
-      return polygonPools;
-    case 250:
-      return fantomPools;
-    case 1666600000:
-      return harmonyPools;
-    case 42161:
-      return arbitrumPools;
-    case 42220:
-      return celoPools;
-    case 1285:
-      return moonriverPools;
-    case 25:
-      return cronosPools;
-    case 122:
-      return fusePools;
-    case 1088:
-      return metisPools;
+    // case 128:
+    //   return hecoPools;
+    // case 43114:
+    //   return avalanchePools;
+    // case 137:
+    //   return polygonPools;
+    // case 250:
+    //   return fantomPools;
+    // case 1666600000:
+    //   return harmonyPools;
+    // case 42161:
+    //   return arbitrumPools;
+    // case 42220:
+    //   return celoPools;
+    // case 1285:
+    //   return moonriverPools;
+    // case 25:
+    //   return cronosPools;
+    // case 122:
+    //   return fusePools;
+    // case 1088:
+    //   return metisPools;
     default:
       return [];
   }

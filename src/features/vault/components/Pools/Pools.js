@@ -71,8 +71,8 @@ export default function Pools() {
 
   return (
     <Grid container className={classes.container}>
-      <Grid item xs={6}>
-        <h1 className={classes.title}>{t('Vault-Network')}</h1>
+      <Grid item xs={12} className={classes.networkSummary}>
+        {/* <h1 className={classes.title}>{t('Vault-Network')}</h1> */}
         <NetworksToggle />
         {fetchVaultsDataDone && activePoolCount && (
           <>

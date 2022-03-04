@@ -41,6 +41,10 @@ const styles = theme => ({
     marginBottom: '-6px',
     paddingRight: '5px',
   },
+  networkSummary: {
+    display: 'flex',
+    justifyContent: 'space-between',
+  },
 });
 
 export default styles;
