@@ -63,6 +63,9 @@ function Root() {
         <meta property="og:description" content={getPageMeta('App-Meta-Description')} />
         <meta property="og:url" content={process.env.PUBLIC_URL || 'https://app.beefy.finance'} />
       </Helmet>
+      <div id="stars"></div>
+      <div id="stars2"></div>
+      <div id="stars3"></div>
       <HashRouter>{children}</HashRouter>
     </Provider>
   );
