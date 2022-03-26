@@ -49,7 +49,7 @@ const NetworksModal = memo(function NetworksModal({ isOpen, handleClose, current
               {allNetworks.map(network => (
                 <Grid key={network.name} item xs={4}>
                   <div
-                    // onClick={() => handleNetworkClick(network)}
+                    onClick={() => handleNetworkClick(network)}
                     className={classes.network}
                     key={network.id}
                   >

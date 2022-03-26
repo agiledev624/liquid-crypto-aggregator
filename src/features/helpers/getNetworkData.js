@@ -120,10 +120,10 @@ export const getNetworkPools = () => {
     //   return hecoPools;
     // case 43114:
     //   return avalanchePools;
-    // case 137:
-    //   return polygonPools;
-    // case 250:
-    //   return fantomPools;
+    case 137:
+      return polygonPools;
+    case 250:
+      return fantomPools;
     // case 1666600000:
     //   return harmonyPools;
     // case 42161:
