@@ -3,7 +3,7 @@ const styles = theme => ({
     padding: '24px',
     margin: '8px 0 2rem',
     // border: '1px solid ' + theme.palette.background.border,
-    boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px !important',
+    // boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px !important',
     backgroundColor: theme.palette.background.primary,
     justifyContent: 'space-between',
     position: 'relative',

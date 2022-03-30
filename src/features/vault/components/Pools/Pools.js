@@ -71,15 +71,17 @@ export default function Pools() {
 
   return (
     <Grid container className={classes.container}>
-      <Grid item xs={12} className={classes.networkSummary}>
-        {/* <h1 className={classes.title}>{t('Vault-Network')}</h1> */}
-        <NetworksToggle />
+      {/* <Grid item xs={12} className={classes.networkSummary}> */}
+      {/* <h1 className={classes.title}>{t('Vault-Network')}</h1> */}
+
+      {/* <NetworksToggle />
         {fetchVaultsDataDone && activePoolCount && (
           <>
             <span className={classes.text}>{`${activePoolCount} ${t('Vault-MainTitle')}`}</span>
           </>
-        )}
-      </Grid>
+        )} */}
+      {/* </Grid> */}
+
       {/* <Grid item xs={6}>
         <div className={classes.tvl}>
           <span className={classes.title}>
@@ -120,6 +122,7 @@ export default function Pools() {
         fetchBalancesDone={fetchBalancesDone}
         fetchApysDone={fetchApysDone}
         fetchVaultsDataDone={fetchVaultsDataDone}
+        activePoolCount={activePoolCount}
       />
     </Grid>
   );
