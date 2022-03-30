@@ -460,31 +460,31 @@ export const getNetworkConnectors = t => {
               name: 'MetaMask',
             },
           },
-          // walletconnect: {
-          //   package: WalletConnectProvider,
-          //   options: {
-          //     rpc: {
-          //       1: 'https://bsc-dataseed.binance.org/',
-          //       56: 'https://bsc-dataseed.binance.org/',
-          //     },
-          //   },
-          // },
-          // 'custom-clover-bsc': {
-          //   display: {
-          //     logo: require(`images/wallets/clover.png`),
-          //     name: 'Clover Wallet',
-          //     description: t('Connect with your Clover wallet and earn CLV'),
-          //   },
-          //   options: {
-          //     supportedChainIds: [56],
-          //   },
-          //   package: CloverConnector,
-          //   connector: async (ProviderPackage, options) => {
-          //     const provider = new ProviderPackage(options);
-          //     await provider.activate();
-          //     return provider.getProvider();
-          //   },
-          // },
+          walletconnect: {
+            package: WalletConnectProvider,
+            options: {
+              rpc: {
+                1: 'https://bsc-dataseed.binance.org/',
+                56: 'https://bsc-dataseed.binance.org/',
+              },
+            },
+          },
+          'custom-clover-bsc': {
+            display: {
+              logo: require(`images/wallets/clover.png`),
+              name: 'Clover Wallet',
+              description: t('Connect with your Clover wallet and earn CLV'),
+            },
+            options: {
+              supportedChainIds: [56],
+            },
+            package: CloverConnector,
+            connector: async (ProviderPackage, options) => {
+              const provider = new ProviderPackage(options);
+              await provider.activate();
+              return provider.getProvider();
+            },
+          },
           'custom-binance': {
             display: {
               name: 'Binance',
@@ -525,28 +525,28 @@ export const getNetworkConnectors = t => {
           //   package: 'safepal',
           //   connector: connectors.injected,
           // },
-          // 'custom-cb-bsc': {
-          //   display: {
-          //     logo: require(`images/wallets/coinbase.png`),
-          //     name: 'Coinbase Wallet',
-          //     description: t('Connect to your Coinbase Wallet'),
-          //   },
-          //   options: {
-          //     appName: 'Beefy Finance',
-          //     appLogoUrl: 'https://app.beefy.finance/static/media/BIFI.e797b2e4.png',
-          //     darkMode: false,
-          //   },
-          //   package: WalletLink,
-          //   connector: async (ProviderPackage, options) => {
-          //     const walletLink = new ProviderPackage(options);
+          'custom-cb-bsc': {
+            display: {
+              logo: require(`images/wallets/coinbase.png`),
+              name: 'Coinbase Wallet',
+              description: t('Connect to your Coinbase Wallet'),
+            },
+            options: {
+              appName: 'Liquid Crypto',
+              appLogoUrl: 'https://www.liquid-crypto.io/images/logo.png',
+              darkMode: false,
+            },
+            package: WalletLink,
+            connector: async (ProviderPackage, options) => {
+              const walletLink = new ProviderPackage(options);
 
-          //     const provider = walletLink.makeWeb3Provider('https://bsc-dataseed.binance.org/', 56);
+              const provider = walletLink.makeWeb3Provider('https://bsc-dataseed.binance.org/', 56);
 
-          //     await provider.enable();
+              await provider.enable();
 
-          //     return provider;
-          //   },
-          // },
+              return provider;
+            },
+          },
         },
       };
     case 128:
@@ -633,8 +633,8 @@ export const getNetworkConnectors = t => {
               description: t('Connect to your Coinbase Wallet'),
             },
             options: {
-              appName: 'Beefy Finance',
-              appLogoUrl: 'https://app.beefy.finance/static/media/BIFI.e797b2e4.png',
+              appName: 'Liquid Crypto',
+              appLogoUrl: 'https://www.liquid-crypto.io/images/logo.png',
               darkMode: false,
             },
             package: WalletLink,
@@ -696,8 +696,8 @@ export const getNetworkConnectors = t => {
               description: t('Connect to your Coinbase Wallet'),
             },
             options: {
-              appName: 'Beefy Finance',
-              appLogoUrl: 'https://app.beefy.finance/static/media/BIFI.e797b2e4.png',
+              appName: 'Liquid Crypto',
+              appLogoUrl: 'https://www.liquid-crypto.io/images/logo.png',
               darkMode: false,
             },
             package: WalletLink,
@@ -767,8 +767,8 @@ export const getNetworkConnectors = t => {
               description: t('Connect to your Coinbase Wallet'),
             },
             options: {
-              appName: 'Beefy Finance',
-              appLogoUrl: 'https://app.beefy.finance/static/media/BIFI.e797b2e4.png',
+              appName: 'Liquid Crypto',
+              appLogoUrl: 'https://www.liquid-crypto.io/images/logo.png',
               darkMode: false,
             },
             package: WalletLink,
@@ -855,8 +855,8 @@ export const getNetworkConnectors = t => {
               description: t('Connect to your Coinbase Wallet'),
             },
             options: {
-              appName: 'Beefy Finance',
-              appLogoUrl: 'https://app.beefy.finance/static/media/BIFI.e797b2e4.png',
+              appName: 'Liquid Crypto',
+              appLogoUrl: 'https://www.liquid-crypto.io/images/logo.png',
               darkMode: false,
             },
             package: WalletLink,
