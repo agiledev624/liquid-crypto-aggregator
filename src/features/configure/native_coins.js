@@ -103,4 +103,12 @@ export const nativeCoins = [
     wrappedSymbol: 'WMETIS',
     allowance: Infinity,
   },
+  {
+    chainId: 1284,
+    name: 'Moonbeam',
+    symbol: 'GLMR',
+    decimals: 18,
+    wrappedSymbol: 'WGLMR',
+    allowance: Infinity,
+  },
 ];

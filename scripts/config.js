@@ -10,6 +10,7 @@ import { moonriverPools } from '../src/features/configure/vault/moonriver_pools.
 import { cronosPools } from '../src/features/configure/vault/cronos_pools.js';
 import { fusePools } from '../src/features/configure/vault/fuse_pools.js';
 import { metisPools } from '../src/features/configure/vault/metis_pools.js';
+import { moonbeamPools } from '../src/features/configure/vault/moonbeam_pools.js';
 
 export const chainPools = {
   bsc: bscPools,
@@ -24,6 +25,7 @@ export const chainPools = {
   cronos: cronosPools,
   fuse: fusePools,
   metis: metisPools,
+  moonbeamPools: moonbeamPools,
 };
 
 export const chainRpcs = {
@@ -39,4 +41,5 @@ export const chainRpcs = {
   cronos: process.env.CRONOS_RPC || 'https://evm-cronos.crypto.org',
   fuse: process.env.FUSE_RPC || 'https://rpc.fuse.io',
   metis: process.env.METIS_RPC || 'https://andromeda.metis.io/?owner=1088',
+  moonbeam: process.env.MOONBEAM_RPC || 'https://rpc.api.moonbeam.network',
 };
