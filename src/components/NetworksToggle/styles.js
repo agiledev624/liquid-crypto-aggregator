@@ -6,7 +6,7 @@ const styles = theme => ({
     borderRadius: '35px',
     backgroundColor: theme.palette.background.secondary,
     '&:hover': {
-      backgroundColor: theme.palette.background.border,
+      backgroundColor: theme.palette.background.hoverColor,
       cursor: 'pointer',
     },
     padding: '0 16px 0 0',

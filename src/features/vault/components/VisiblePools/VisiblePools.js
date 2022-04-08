@@ -53,7 +53,13 @@ const VisiblePools = ({
 
   const onSummaryClick = useCallback(
     e => {
-      if (!e.target || !e.target.classList.contains('tooltip-toggle')) {
+      console.log(e.target);
+      if (
+        !e.target ||
+        (!e.target.classList.contains('tooltip-toggle') &&
+          !e.target.classList.contains('MuiGrid-container') &&
+          !e.target.classList.contains('MuiDialog-container'))
+      ) {
         toggleCard();
       }
     },
