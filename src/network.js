@@ -12,12 +12,12 @@ export const allNetworks = [
   //   id: 128,
   //   hash: '/heco',
   // },
-  // {
-  //   name: 'AVALANCHE',
-  //   asset: 'AVALANCHE',
-  //   id: 43114,
-  //   hash: '/avax',
-  // },
+  {
+    name: 'AVALANCHE',
+    asset: 'AVALANCHE',
+    id: 43114,
+    hash: '/avax',
+  },
   {
     name: 'POLYGON',
     asset: 'POLYGON',
@@ -54,12 +54,12 @@ export const allNetworks = [
   //   id: 1285,
   //   hash: '/moonriver',
   // },
-  // {
-  //   name: 'CRONOS',
-  //   asset: 'CRONOS',
-  //   id: 25,
-  //   hash: '/cronos',
-  // },
+  {
+    name: 'CRONOS',
+    asset: 'CRONOS',
+    id: 25,
+    hash: '/cronos',
+  },
   // {
   //   name: 'FUSE',
   //   asset: 'FUSE Network',
