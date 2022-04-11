@@ -135,8 +135,8 @@ export const getNetworkPools = () => {
     //   return harmonyPools;
     // case 42161:
     //   return arbitrumPools;
-    // case 42220:
-    //   return celoPools;
+    case 42220:
+      return celoPools;
     // case 1285:
     //   return moonriverPools;
     case 25:

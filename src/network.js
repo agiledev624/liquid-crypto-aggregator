@@ -42,12 +42,12 @@ export const allNetworks = [
   //   id: 42161,
   //   hash: '/arbitrum',
   // },
-  // {
-  //   name: 'CELO',
-  //   asset: 'CELO',
-  //   id: 42220,
-  //   hash: '/celo',
-  // },
+  {
+    name: 'CELO',
+    asset: 'CELO',
+    id: 42220,
+    hash: '/celo',
+  },
   // {
   //   name: 'MOONRIVER',
   //   asset: 'MOONRIVER',
