@@ -143,8 +143,8 @@ export const getNetworkPools = () => {
       return cronosPools;
     // case 122:
     //   return fusePools;
-    // case 1088:
-    //   return metisPools;
+    case 1088:
+      return metisPools;
     case 1284:
       return moonbeamPools;
     default:

@@ -66,12 +66,12 @@ export const allNetworks = [
   //   id: 122,
   //   hash: '/fuse',
   // },
-  // {
-  //   name: 'METIS',
-  //   asset: 'Andromeda',
-  //   id: 1088,
-  //   hash: '/metis',
-  // },
+  {
+    name: 'METIS',
+    asset: 'Andromeda',
+    id: 1088,
+    hash: '/metis',
+  },
   {
     name: 'MOONBEAM',
     asset: 'MOONBEAM',
