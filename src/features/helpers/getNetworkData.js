@@ -6,6 +6,7 @@ import WalletLink from 'walletlink';
 import { CloverConnector } from '@clover-network/clover-connector';
 import { allNetworks } from '../../network';
 import {
+  ethereumPools,
   avalanchePools,
   avalancheStakePools,
   avaxAddressBook,
@@ -64,6 +65,7 @@ import {
 export const appNetworkId = window.REACT_APP_NETWORK_ID;
 
 const networkTxUrls = {
+  1: hash => `https://etherscan.io/tx/${hash}`,
   56: hash => `https://bscscan.com/tx/${hash}`,
   128: hash => `https://hecoinfo.com/tx/${hash}`,
   43114: hash => `https://snowtrace.io/tx/${hash}`,
@@ -80,6 +82,7 @@ const networkTxUrls = {
 };
 
 const networkFriendlyName = {
+  1: 'Ethereum',
   56: 'BSC',
   128: 'HECO',
   43114: 'AVAX',
@@ -121,6 +124,8 @@ export const getNetworkCoin = () => {
 
 export const getNetworkPools = () => {
   switch (window.REACT_APP_NETWORK_ID) {
+    case 1:
+      return ethereumPools;
     case 56:
       return bscPools;
     // case 128:
@@ -154,6 +159,8 @@ export const getNetworkPools = () => {
 
 export const getNetworkVaults = (networkId = appNetworkId) => {
   switch (networkId) {
+    case 1:
+      return indexBy(ethereumPools, 'id');
     case 56:
       return indexBy(bscPools, 'id');
     case 128:
@@ -221,6 +228,8 @@ export const getNetworkLaunchpools = (networkId = appNetworkId) => {
 export const getNetworkTokens = () => {
   const chainId = window.REACT_APP_NETWORK_ID;
   switch (chainId) {
+    case 1:
+      return [];
     case 56:
       return bscAddressBook.tokens;
     case 128:
@@ -256,6 +265,8 @@ export const getNetworkTokens = () => {
 
 export const getNetworkBurnTokens = () => {
   switch (window.REACT_APP_NETWORK_ID) {
+    case 1:
+      return {};
     case 56:
       return {
         [bscAddressBook.tokens.PERA.symbol]: bscAddressBook.tokens.PERA,

@@ -1,3 +1,4 @@
+import { ethPools } from '../src/features/configure/vault/ethereum_pools';
 import { bscPools } from '../src/features/configure/vault/bsc_pools.js';
 import { hecoPools } from '../src/features/configure/vault/heco_pools.js';
 import { avalanchePools } from '../src/features/configure/vault/avalanche_pools.js';
@@ -13,6 +14,7 @@ import { metisPools } from '../src/features/configure/vault/metis_pools.js';
 import { moonbeamPools } from '../src/features/configure/vault/moonbeam_pools.js';
 
 export const chainPools = {
+  eth: ethPools,
   bsc: bscPools,
   heco: hecoPools,
   avax: avalanchePools,
@@ -29,6 +31,7 @@ export const chainPools = {
 };
 
 export const chainRpcs = {
+  eth: process.env.ETH_RPC || 'https://rpc.ankr.com/eth',
   bsc: process.env.BSC_RPC || 'https://bsc-dataseed.binance.org/',
   heco: process.env.HECO_RPC || 'https://http-mainnet.hecochain.com',
   avax: process.env.AVAX_RPC || 'https://api.avax.network/ext/bc/C/rpc',

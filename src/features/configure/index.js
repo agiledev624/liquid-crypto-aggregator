@@ -69,6 +69,7 @@ export { cronosPools } from './vault/cronos_pools';
 export { fusePools } from './vault/fuse_pools';
 export { metisPools } from './vault/metis_pools';
 export { moonbeamPools } from './vault/moonbeam_pools';
+export { ethereumPools } from './vault/ethereum_pools';
 export { bscZaps } from './zap/bsc_zaps';
 export { hecoZaps } from './zap/heco_zaps';
 export { avalancheZaps } from './zap/avalanche_zaps';

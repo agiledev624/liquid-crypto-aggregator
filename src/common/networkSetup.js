@@ -1,4 +1,15 @@
 export const networkSettings = {
+  1: {
+    chainId: `0x${parseInt(1, 10).toString(16)}`,
+    chainName: 'Ethereum Mainnet',
+    nativeCurrency: {
+      name: 'Ethereum',
+      symbol: 'ETH',
+      decimals: 18,
+    },
+    rpcUrls: ['https://rpc.ankr.com/eth'],
+    blockExplorerUrls: ['https://etherscan.io'],
+  },
   56: {
     chainId: `0x${parseInt(56, 10).toString(16)}`,
     chainName: 'BSC Mainnet',
