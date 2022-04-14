@@ -7,7 +7,7 @@ export const networkSettings = {
       symbol: 'ETH',
       decimals: 18,
     },
-    rpcUrls: ['https://rpc.ankr.com/eth'],
+    rpcUrls: ['https://mainnet.infura.io/v3/f356deefbe9b4e79adc764482378221f'],
     blockExplorerUrls: ['https://etherscan.io'],
   },
   56: {

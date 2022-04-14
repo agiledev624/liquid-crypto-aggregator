@@ -20,8 +20,10 @@ export function fetchBalances({ address, web3, tokens }) {
     });
 
     const promise = new Promise((resolve, reject) => {
-      const multicall = new MultiCall(web3, getNetworkMulticall());
-
+      const multicall =
+        window.REACT_APP_NETWORK_ID == 1
+          ? new MultiCall(web3)
+          : new MultiCall(web3, getNetworkMulticall());
       const balanceCalls = [];
       const allowanceCalls = [];
       const launchPoolBalanceCalls = [];

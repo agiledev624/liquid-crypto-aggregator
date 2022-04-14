@@ -451,6 +451,8 @@ export const getNetworkStables = () => {
 
 export const getNetworkMulticall = () => {
   switch (window.REACT_APP_NETWORK_ID) {
+    case 1:
+      return '0xeefBa1e63905eF1D7ACbA5a8513c70307C1cE441';
     case 56:
       return '0xB94858b0bB5437498F5453A16039337e5Fdc269C';
     case 128:
@@ -484,6 +486,18 @@ export const getNetworkMulticall = () => {
 
 export const getNetworkConnectors = t => {
   switch (window.REACT_APP_NETWORK_ID) {
+    case 1:
+      return {
+        network: 'mainnet',
+        cacheProvider: true,
+        providerOptions: {
+          injected: {
+            display: {
+              name: 'MetaMask',
+            },
+          },
+        },
+      };
     case 56:
       return {
         network: 'binance',

@@ -26,7 +26,10 @@ export function fetchVaultsData({ web3, pools }) {
     }
 
     const promise = new Promise((resolve, reject) => {
-      const multicall = new MultiCall(web3, getNetworkMulticall());
+      const multicall =
+        window.REACT_APP_NETWORK_ID == 1
+          ? new MultiCall(web3)
+          : new MultiCall(web3, getNetworkMulticall());
       const vaultCalls = pools.map(pool => {
         const vault = new web3.eth.Contract(vaultABI, pool.earnedTokenAddress);
         return {
