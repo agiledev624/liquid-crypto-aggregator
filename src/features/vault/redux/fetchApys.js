@@ -12,6 +12,8 @@ import { apiUrl } from 'features/helpers/getApiInfo';
 const config = {
   headers: {
     'Content-Type': 'application/json',
+    'Access-Control-Allow-Origin': '*',
+    mode: 'no-cors',
   },
 };
 
