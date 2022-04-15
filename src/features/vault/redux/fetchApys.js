@@ -9,6 +9,12 @@ import {
 import { getApiCacheBuster } from '../../web3/getApiCacheBuster';
 import { apiUrl } from 'features/helpers/getApiInfo';
 
+const config = {
+  headers: {
+    'Content-Type': 'application/json',
+  },
+};
+
 export function fetchApys() {
   return dispatch => {
     dispatch({
@@ -17,7 +23,7 @@ export function fetchApys() {
 
     return new Promise((resolve, reject) => {
       const cacheBuster = getApiCacheBuster();
-      const doRequest = axios.get(`${apiUrl}/apy/breakdown?_=${cacheBuster}`);
+      const doRequest = axios.get(`${apiUrl}/apy/breakdown?_=${cacheBuster}`, config);
 
       doRequest.then(
         res => {

@@ -9,6 +9,12 @@ import {
 import { getApiCacheBuster } from '../../web3/getApiCacheBuster';
 import { apiUrl } from 'features/helpers/getApiInfo';
 
+const config = {
+  headers: {
+    'Content-Type': 'application/json',
+  },
+};
+
 export function fetchBifibuyback() {
   return dispatch => {
     dispatch({
@@ -17,7 +23,7 @@ export function fetchBifibuyback() {
 
     return new Promise((resolve, reject) => {
       const cacheBuster = getApiCacheBuster();
-      const doRequest = axios.get(`${apiUrl}/bifibuyback?_=${cacheBuster}`);
+      const doRequest = axios.get(`${apiUrl}/bifibuyback?_=${cacheBuster}`, config);
 
       doRequest.then(
         res => {

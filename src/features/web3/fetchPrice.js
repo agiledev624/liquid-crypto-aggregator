@@ -11,6 +11,12 @@ const priceCache = {
   lastUpdated: undefined,
 };
 
+const config = {
+  headers: {
+    'Content-Type': 'application/json',
+  },
+};
+
 function getCachedPrice(id) {
   return priceCache.cache.get(id);
 }
@@ -30,7 +36,7 @@ const fetchTokens = async () => {
   const cacheBuster = getApiCacheBuster();
 
   try {
-    const response = await axios.get(`${apiUrl}/prices?_=${cacheBuster}`);
+    const response = await axios.get(`${apiUrl}/prices?_=${cacheBuster}`, config);
     return response.data;
   } catch (err) {
     console.error(err);
@@ -42,7 +48,7 @@ const fetchLPs = async () => {
   const cacheBuster = getApiCacheBuster();
 
   try {
-    const response = await axios.get(`${apiUrl}/lps?_=${cacheBuster}`);
+    const response = await axios.get(`${apiUrl}/lps?_=${cacheBuster}`, config);
     return response.data;
   } catch (err) {
     console.error(err);
