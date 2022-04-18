@@ -226,6 +226,10 @@ const styles = theme => ({
       width: '180px',
     },
   },
+  additionalBuy: {
+    padding: '9.5px 25px',
+    width: 'inherit !important',
+  },
   icon: {
     color: theme.palette.text.primary,
     width: '24px',

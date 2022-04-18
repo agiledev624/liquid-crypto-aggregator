@@ -9,7 +9,7 @@ import Button from 'components/CustomButtons/Button.js';
 import { useTranslation } from 'react-i18next';
 import { LanguageDropdown } from '../LanguageDropdown/LanguageDropdown';
 import Davatar from '@davatar/react';
-
+import Transak from 'components/Transak';
 import styles from './styles';
 import { useENS } from 'features/home/hooks/useENS';
 
@@ -52,6 +52,16 @@ const HeaderLinks = ({
       {/* <ListItem className={classes.listItem}>
         <LanguageDropdown navLinkClass={classes.navLink} />
       </ListItem> */}
+      <ListItem className={classes.listItem}>
+        <Transak
+          style={{ marginLeft: '5px', marginRight: '5px' }}
+          className={`${classes.walletDisplay} ${classes.additionalBuy}`}
+        >
+          <i className={`fas fa-credit-card ${classes.icon}`} />
+          {t('buy')}
+        </Transak>
+      </ListItem>
+
       <ListItem className={classes.listItem}>
         <Button
           disableElevation
