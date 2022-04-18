@@ -1,16 +1,17 @@
 /* eslint-disable import/first */
 export const allNetworks = [
-  {
-    name: 'ETHEREUM',
-    asset: 'ETH',
-    id: 1,
-    hash: '/ethereum',
-  },
+  
   {
     name: 'BSC',
     asset: 'BSC',
     id: 56,
     hash: '/bsc',
+  },
+  {
+    name: 'FANTOM',
+    asset: 'FANTOM',
+    id: 250,
+    hash: '/fantom',
   },
   // {
   //   name: 'HECO',
@@ -30,12 +31,7 @@ export const allNetworks = [
     id: 137,
     hash: '/polygon',
   },
-  {
-    name: 'FANTOM',
-    asset: 'FANTOM',
-    id: 250,
-    hash: '/fantom',
-  },
+  
   // {
   //   name: 'HARMONY',
   //   asset: 'HARMONY',
@@ -83,6 +79,12 @@ export const allNetworks = [
     asset: 'MOONBEAM',
     id: 1284,
     hash: '/moonbeam',
+  },
+  {
+    name: 'ETHEREUM',
+    asset: 'ETH',
+    id: 1,
+    hash: '/ethereum',
   },
 ];
 
