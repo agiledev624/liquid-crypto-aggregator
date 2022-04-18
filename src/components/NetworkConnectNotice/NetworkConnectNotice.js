@@ -98,7 +98,7 @@ export function NetworkConnectNotice({
           </Button>
         </div>
         <div className={classes.note}>{t('Network-SwitchNote')}</div>
-        {networkSetupError ? <div className={classes.error}>{networkSetupError}</div> : ''}
+        {/* {networkSetupError ? <div className={classes.error}>{networkSetupError}</div> : ''} */}
       </>
     );
   } else if (!haveAddress) {

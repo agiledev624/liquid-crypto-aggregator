@@ -1,15 +1,5 @@
 export const networkSettings = {
-  1: {
-    chainId: `0x${parseInt(1, 10).toString(16)}`,
-    chainName: 'Ethereum Mainnet',
-    nativeCurrency: {
-      name: 'Ethereum',
-      symbol: 'ETH',
-      decimals: 18,
-    },
-    rpcUrls: ['https://mainnet.infura.io/v3/f356deefbe9b4e79adc764482378221f'],
-    blockExplorerUrls: ['https://etherscan.io'],
-  },
+  
   56: {
     chainId: `0x${parseInt(56, 10).toString(16)}`,
     chainName: 'BSC Mainnet',
@@ -20,6 +10,17 @@ export const networkSettings = {
     },
     rpcUrls: ['https://bsc-dataseed.binance.org'],
     blockExplorerUrls: ['https://bscscan.com/'],
+  },
+  250: {
+    chainId: `0x${parseInt(250, 10).toString(16)}`,
+    chainName: 'Fantom Opera',
+    nativeCurrency: {
+      name: 'FTM',
+      symbol: 'FTM',
+      decimals: 18,
+    },
+    rpcUrls: ['https://rpc.ftm.tools'],
+    blockExplorerUrls: ['https://ftmscan.com/'],
   },
   128: {
     chainId: `0x${parseInt(128, 10).toString(16)}`,
@@ -54,17 +55,7 @@ export const networkSettings = {
     rpcUrls: ['https://polygon-rpc.com'],
     blockExplorerUrls: ['https://polygonscan.com/'],
   },
-  250: {
-    chainId: `0x${parseInt(250, 10).toString(16)}`,
-    chainName: 'Fantom Opera',
-    nativeCurrency: {
-      name: 'FTM',
-      symbol: 'FTM',
-      decimals: 18,
-    },
-    rpcUrls: ['https://rpc.ftm.tools'],
-    blockExplorerUrls: ['https://ftmscan.com/'],
-  },
+  
   1666600000: {
     chainId: `0x${parseInt(1666600000, 10).toString(16)}`,
     chainName: 'Harmony One',
@@ -152,6 +143,17 @@ export const networkSettings = {
     },
     rpcUrls: ['https://rpc.api.moonbeam.network'],
     blockExplorerUrls: ['https://moonscan.io/'],
+  },
+  1: {
+    chainId: `0x${parseInt(1, 10).toString(16)}`,
+    chainName: 'Ethereum Mainnet',
+    nativeCurrency: {
+      name: 'Ethereum',
+      symbol: 'ETH',
+      decimals: 18,
+    },
+    rpcUrls: ['https://mainnet.infura.io/v3/f356deefbe9b4e79adc764482378221f'],
+    blockExplorerUrls: ['https://etherscan.io'],
   },
 };
 
