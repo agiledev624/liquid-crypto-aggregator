@@ -26,6 +26,7 @@ const styles = theme => ({
     color: grayColor[15],
     width: '100%',
     margin: '0 auto',
+    zIndex: '1 !important',
     // backgroundColor: blackColor,
     // background: blackColor,
     background: '#0c154e',
