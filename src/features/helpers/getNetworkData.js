@@ -496,6 +496,15 @@ export const getNetworkConnectors = t => {
               name: 'MetaMask',
             },
           },
+          walletconnect: {
+            package: WalletConnectProvider,
+            options: {
+              rpc: {
+                1: 'https://rpc.ankr.com/eth/',
+                // 56: 'https://bsc-dataseed.binance.org/',
+              },
+            },
+          },
         },
       };
     case 56:
