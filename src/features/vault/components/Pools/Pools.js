@@ -26,7 +26,7 @@ export default function Pools() {
     useFetchVaultsData();
   const { tokens, fetchBalances, fetchBalancesPending, fetchBalancesDone } = useFetchBalances();
   const { apys, fetchApys, fetchApysDone } = useFetchApys();
-  const { bifibuyback, fetchBifibuyback, fetchBifibuybackDone } = useFetchBifibuyback();
+  // const { bifibuyback, fetchBifibuyback, fetchBifibuybackDone } = useFetchBifibuyback();
   const { poolsTvl } = usePoolsTvl(pools);
   const { userTvl } = useUserTvl(pools, tokens);
   const classes = useStyles();
@@ -37,11 +37,11 @@ export default function Pools() {
     return () => clearInterval(id);
   }, [fetchApys]);
 
-  useEffect(() => {
-    fetchBifibuyback();
-    const id = setInterval(fetchBifibuyback, FETCH_INTERVAL_MS);
-    return () => clearInterval(id);
-  }, [fetchBifibuyback]);
+  // useEffect(() => {
+  //   fetchBifibuyback();
+  //   const id = setInterval(fetchBifibuyback, FETCH_INTERVAL_MS);
+  //   return () => clearInterval(id);
+  // }, [fetchBifibuyback]);
 
   useEffect(() => {
     const fetch = () => {
