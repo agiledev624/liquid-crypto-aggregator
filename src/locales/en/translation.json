@@ -68,7 +68,7 @@
   "Vault-LendingWarningTitle": "Uses leverage, please read the docs before depositing.",
   "Vault-GeneralWarningTitle": "Please DYOR before depositing.",
   "Vault-Staked": "Staked",
-  "Vault-Description": "Uses: {{vault}}",
+  "Vault-Description": "Platform: {{vault}}",
   "Vault-Network": "Select Network",
   "Vault-Experimental": "Experimental",
   "Vault-Loading": "Loading Vault...",

@@ -1,6 +1,5 @@
 /* eslint-disable import/first */
 export const allNetworks = [
-  
   {
     name: 'BSC',
     asset: 'BSC',
@@ -31,7 +30,7 @@ export const allNetworks = [
     id: 137,
     hash: '/polygon',
   },
-  
+
   // {
   //   name: 'HARMONY',
   //   asset: 'HARMONY',
@@ -91,7 +90,8 @@ export const allNetworks = [
 const network = allNetworks.find(n => window.location.hash.startsWith('#' + n.hash));
 
 if (!network) {
-  window.location.hash = allNetworks[1].hash;
+  //default network to bsc (which is first of 9)
+  window.location.hash = allNetworks[0].hash;
   window.location.reload();
 } else {
   window.REACT_APP_NETWORK_ID = network.id;
