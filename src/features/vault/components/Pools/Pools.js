@@ -62,10 +62,10 @@ export default function Pools() {
   }, [address, web3, fetchBalances, fetchVaultsData]);
 
   const chainNameLowercase = getNetworkFriendlyName().toLowerCase();
-  const chainBifibuyback =
-    fetchBifibuybackDone && chainNameLowercase in bifibuyback
-      ? bifibuyback[chainNameLowercase].buybackUsdAmount
-      : undefined;
+  // const chainBifibuyback =
+  //   fetchBifibuybackDone && chainNameLowercase in bifibuyback
+  //     ? bifibuyback[chainNameLowercase].buybackUsdAmount
+  //     : undefined;
 
   const activePoolCount = pools.filter(pool => pool.status === 'active').length;
 
