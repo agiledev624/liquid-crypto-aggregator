@@ -486,27 +486,27 @@ export const getNetworkMulticall = () => {
 
 export const getNetworkConnectors = t => {
   switch (window.REACT_APP_NETWORK_ID) {
-    // case 1:
-    //   return {
-    //     network: 'mainnet',
-    //     cacheProvider: true,
-    //     providerOptions: {
-    //       injected: {
-    //         display: {
-    //           name: 'MetaMask',
-    //         },
-    //       },
-    //       walletconnect: {
-    //         package: WalletConnectProvider,
-    //         options: {
-    //           rpc: {
-    //             1: 'https://rpc.ankr.com/eth/',
-    //             // 56: 'https://bsc-dataseed.binance.org/',
-    //           },
-    //         },
-    //       },
-    //     },
-    //   };
+    case 1:
+      return {
+        network: 'mainnet',
+        cacheProvider: true,
+        providerOptions: {
+          injected: {
+            display: {
+              name: 'MetaMask',
+            },
+          },
+          walletconnect: {
+            package: WalletConnectProvider,
+            options: {
+              rpc: {
+                1: 'https://rpc.ankr.com/eth/',
+                // 56: 'https://bsc-dataseed.binance.org/',
+              },
+            },
+          },
+        },
+      };
     case 56:
       return {
         network: 'binance',
