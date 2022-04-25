@@ -44,6 +44,13 @@ const styles = theme => ({
     borderRadius: '50px',
     outline: 'rgb(0, 28, 70) solid 5px',
   },
+  filtersText: {
+    position: 'absolute',
+    left: '50%',
+    bottom: '15px',
+    textAlign: 'center',
+    marginLeft: '-8px',
+  },
 });
 
 export default styles;

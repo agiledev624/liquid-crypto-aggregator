@@ -53,11 +53,22 @@ const HeaderLinks = ({
         <LanguageDropdown navLinkClass={classes.navLink} />
       </ListItem> */}
       <ListItem className={classes.listItem}>
-        <Transak
-          style={{ marginLeft: '5px', marginRight: '5px' }}
-          className={`${classes.walletDisplay} ${classes.additionalBuy}`}
+        <Button
+          style={{ marginRight: '5px' }}
+          className={`${classes.walletDisplay} ${classes.additionalBuy} ${classes.listItemHeight}`}
+          href="https://docs.liquid-crypto.io/product-docs/faq/general"
+          target="_blank"
         >
-          <i className={`fas fa-credit-card ${classes.icon}`} />
+          <i className={`fa fa-book ${classes.icon}`} />
+          {'Docs'}
+        </Button>
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Transak
+          style={{ marginRight: '5px' }}
+          className={`${classes.walletDisplay} ${classes.additionalBuy} ${classes.listItemHeight}`}
+        >
+          <i className={`fa fa-credit-card ${classes.icon}`} />
           {t('buy')}
         </Transak>
       </ListItem>
@@ -65,7 +76,7 @@ const HeaderLinks = ({
       <ListItem className={classes.listItem}>
         <Button
           disableElevation
-          className={classes.walletDisplay}
+          className={`${classes.walletDisplay} ${classes.listItemHeight}`}
           onClick={connected ? disconnectWallet : connectWallet}
         >
           {connected ? (

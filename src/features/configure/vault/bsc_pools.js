@@ -1,5 +1,30 @@
 export const bscPools = [
   {
+    id: 'cakev2-cake-usdt',
+    name: 'CAKE-USDT LP',
+    token: 'CAKE-USDT LP2',
+    tokenDescription: 'PancakeSwap',
+    tokenAddress: '0xA39Af17CE4a8eb807E076805Da1e2B8EA7D0755b',
+    tokenDecimals: 18,
+    tokenDescriptionUrl: '#',
+    earnedToken: 'tokenXCakeV2CAKE-USDT',
+    earnedTokenAddress: '0x12054CA85c3c46ed10F1E3Df36aaEe0f91bfBE1d',
+    earnContractAddress: '0x12054CA85c3c46ed10F1E3Df36aaEe0f91bfBE1d',
+    pricePerFullShare: 1,
+    tvl: 0,
+    oracle: 'lps',
+    oracleId: 'cakev2-cake-usdt',
+    oraclePrice: 0,
+    depositsPaused: false,
+    status: 'active',
+    platform: 'PancakeSwap',
+    assets: ['CAKE', 'USDT'],
+    addLiquidityUrl:
+      'https://pancakeswap.finance/add/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82/0x55d398326f99059fF775485246999027B3197955',
+    buyTokenUrl:
+      'https://pancakeswap.finance/swap?inputCurrency=0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82&outputCurrency=0x55d398326f99059fF775485246999027B3197955',
+  },
+  {
     id: 'cakev2-cake-bnb',
     name: 'CAKE-BNB LP',
     token: 'CAKE-BNB LP2',

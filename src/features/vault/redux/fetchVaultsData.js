@@ -32,6 +32,7 @@ export function fetchVaultsData({ web3, pools }) {
           : new MultiCall(web3, getNetworkMulticall());
       const vaultCalls = pools.map(pool => {
         const vault = new web3.eth.Contract(vaultABI, pool.earnedTokenAddress);
+
         return {
           pricePerFullShare: vault.methods.getPricePerFullShare(),
           tvl: vault.methods.balance(),
@@ -44,6 +45,10 @@ export function fetchVaultsData({ web3, pools }) {
       ])
         .then(data => {
           const newPools = pools.map((pool, i) => {
+            if (pool.id == 'curve-avax-av3crv') {
+              console.log('adsfasdfasdfasdf');
+              console.log(pool, data[0][i]);
+            }
             const pricePerFullShare = byDecimals(data[0][i].pricePerFullShare, 18).toNumber();
             return {
               pricePerFullShare: new BigNumber(pricePerFullShare).toNumber() || 1,

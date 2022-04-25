@@ -238,6 +238,9 @@ const styles = theme => ({
   iconButton: {
     color: theme.palette.text.primary,
   },
+  listItemHeight: {
+    height: '45px',
+  },
 });
 
 export default styles;
