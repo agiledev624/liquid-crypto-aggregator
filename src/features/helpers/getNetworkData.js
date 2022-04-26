@@ -2,7 +2,8 @@ import { connectors } from 'web3modal';
 import { indexBy } from './utils';
 import WalletConnectProvider from '@walletconnect/web3-provider';
 import { DeFiConnector } from 'deficonnect';
-import WalletLink from 'walletlink';
+// import WalletLink from 'walletlink';
+import WalletLink from '@coinbase/wallet-sdk';
 import { CloverConnector } from '@clover-network/clover-connector';
 import { allNetworks } from '../../network';
 import {
