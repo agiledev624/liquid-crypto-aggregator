@@ -617,15 +617,15 @@ export const getNetworkConnectors = t => {
               name: 'MetaMask',
             },
           },
-          // walletconnect: {
-          //   package: WalletConnectProvider,
-          //   options: {
-          //     rpc: {
-          //       1: 'https://http-mainnet.hecochain.com',
-          //       128: 'https://http-mainnet.hecochain.com',
-          //     },
-          //   },
-          // },
+          walletconnect: {
+            package: WalletConnectProvider,
+            options: {
+              rpc: {
+                1: 'https://http-mainnet.hecochain.com',
+                128: 'https://http-mainnet.hecochain.com',
+              },
+            },
+          },
           'custom-clover-heco': {
             display: {
               logo: require(`images/wallets/clover.png`),
