@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo, useState } from 'react';
+import React, { useCallback, useMemo, useState, useEffect } from 'react';
 import Button from '@material-ui/core/Button';
 import { networkSettings, networkSetup } from 'common/networkSetup';
 import { getNetworkAppUrl, getNetworkFriendlyName } from 'features/helpers/getNetworkData';
@@ -25,6 +25,13 @@ export function NetworkConnectNotice({
   const targetNetworkFriendlyName = getNetworkFriendlyName();
   const classes = useStyles();
   let notice = null;
+
+  // useEffect(() => {
+  //   if (haveConnection && !isCorrectNetwork) {
+  //     disconnectWallet();
+  //     console.log('here');
+  //   }
+  // }, []);
 
   const targetNetworkSetup = useCallback(() => {
     setNetworkSetupError(null);

@@ -490,7 +490,7 @@ export const getNetworkConnectors = t => {
     case 1:
       return {
         network: 'mainnet',
-        cacheProvider: true,
+        // cacheProvider: true,
         providerOptions: {
           injected: {
             display: {
@@ -511,7 +511,7 @@ export const getNetworkConnectors = t => {
     case 56:
       return {
         network: 'binance',
-        cacheProvider: true,
+        // cacheProvider: true,
         providerOptions: {
           injected: {
             display: {
@@ -610,7 +610,7 @@ export const getNetworkConnectors = t => {
     case 128:
       return {
         network: 'heco',
-        cacheProvider: true,
+        // cacheProvider: true,
         providerOptions: {
           injected: {
             display: {
@@ -656,7 +656,7 @@ export const getNetworkConnectors = t => {
     case 43114:
       return {
         network: 'avalanche',
-        cacheProvider: true,
+        // cacheProvider: true,
         providerOptions: {
           injected: {
             display: {
@@ -714,7 +714,7 @@ export const getNetworkConnectors = t => {
     case 137:
       return {
         network: 'polygon',
-        cacheProvider: true,
+        // cacheProvider: true,
         providerOptions: {
           injected: {
             display: {
@@ -774,7 +774,7 @@ export const getNetworkConnectors = t => {
     case 250:
       return {
         network: 'fantom',
-        cacheProvider: true,
+        // cacheProvider: true,
         providerOptions: {
           injected: {
             display: {
@@ -845,7 +845,7 @@ export const getNetworkConnectors = t => {
     case 1666600000:
       return {
         network: 'harmony',
-        cacheProvider: true,
+        // cacheProvider: true,
         providerOptions: {
           injected: {
             display: {
@@ -878,7 +878,7 @@ export const getNetworkConnectors = t => {
     case 42161:
       return {
         network: 'arbitrum',
-        cacheProvider: true,
+        // cacheProvider: true,
         providerOptions: {
           injected: {
             display: {
@@ -933,7 +933,7 @@ export const getNetworkConnectors = t => {
     case 1285:
       return {
         network: 'moonriver',
-        cacheProvider: true,
+        // cacheProvider: true,
         providerOptions: {
           injected: {
             display: {
@@ -966,7 +966,7 @@ export const getNetworkConnectors = t => {
     case 42220:
       return {
         network: 'celo',
-        cacheProvider: true,
+        // cacheProvider: true,
         providerOptions: {
           injected: {
             display: {
@@ -1020,7 +1020,7 @@ export const getNetworkConnectors = t => {
     case 25:
       return {
         network: 'cronos',
-        cacheProvider: true,
+        // cacheProvider: true,
         providerOptions: {
           injected: {
             display: {
@@ -1080,7 +1080,7 @@ export const getNetworkConnectors = t => {
     case 122:
       return {
         network: 'fuse',
-        cacheProvider: true,
+        // cacheProvider: true,
         providerOptions: {
           injected: {
             display: {
@@ -1134,7 +1134,7 @@ export const getNetworkConnectors = t => {
     case 1088:
       return {
         network: 'metis',
-        cacheProvider: true,
+        // cacheProvider: true,
         providerOptions: {
           injected: {
             display: {
@@ -1167,7 +1167,7 @@ export const getNetworkConnectors = t => {
     case 1284:
       return {
         network: 'moonbeam',
-        cacheProvider: true,
+        // cacheProvider: true,
         providerOptions: {
           injected: {
             display: {

@@ -56,10 +56,12 @@ const VisiblePools = ({
       console.log(e.target);
       if (
         !e.target ||
-        // (!e.target.classList.contains('tooltip-toggle') &&
-        ///   !e.target.classList.contains('MuiGrid-container') &&
-        ///   !e.target.classList.contains('MuiDialog-container'))
-        e.target.classList.contains('MuiGrid-item')
+        (!e.target.classList.contains('tooltip-toggle') &&
+          !e.target.classList.contains('MuiGrid-container') &&
+          // !e.target.classList.contains('MuiGrid-root') &&
+          !e.target.classList.contains('MuiSvgIcon-root') &&
+          !e.target.classList.contains('MuiDialog-container'))
+        // e.target.classList.contains('MuiGrid-item')
       ) {
         toggleCard();
       }

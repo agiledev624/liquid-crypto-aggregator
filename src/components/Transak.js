@@ -27,7 +27,12 @@ const TransakNav = ({ className, children, ...props }) => {
   }
 
   return (
-    <Button variant="body1" {...props} className={className} onClick={initTransak}>
+    <Button
+      // variant="body1"
+      {...props}
+      className={className}
+      onClick={initTransak}
+    >
       {children}
     </Button>
   );
