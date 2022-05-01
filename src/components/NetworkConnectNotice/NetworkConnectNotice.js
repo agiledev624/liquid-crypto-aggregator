@@ -29,7 +29,6 @@ export function NetworkConnectNotice({
   // useEffect(() => {
   //   if (haveConnection && !isCorrectNetwork) {
   //     disconnectWallet();
-  //     console.log('here');
   //   }
   // }, []);
 

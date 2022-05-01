@@ -157,17 +157,35 @@ export const networkSettings = {
 };
 
 export const networkSetup = chainId => {
-  return new Promise((resolve, reject) => {
+  return new Promise(async (resolve, reject) => {
     const provider = window.ethereum;
     if (provider) {
       if (networkSettings.hasOwnProperty(chainId)) {
-        provider
-          .request({
-            method: 'wallet_addEthereumChain',
-            params: [networkSettings[chainId]],
-          })
-          .then(resolve)
-          .catch(reject);
+        try {
+          await provider.request({
+            method: 'wallet_switchEthereumChain',
+            params: [{ chainId: networkSettings[chainId].chainId }],
+          });
+        } catch (switchError) {
+          if (switchError.code === 4902) {
+            try {
+              provider
+                .request({
+                  method: 'wallet_addEthereumChain',
+                  params: [networkSettings[chainId]],
+                })
+                .then(resolve)
+                .catch(reject);
+              // await ethereum.request({
+              //   method: 'wallet_addEthereumChain',
+              //   params: [{ chainId: '0xf00', rpcUrl: 'https://...' /* ... */ }],
+              // });
+            } catch (addError) {
+              // handle "add" error
+            }
+          }
+          // handle other "switch" errors
+        }
       } else {
         reject(new Error(`No network settings configured for chainId: '${chainId}'`));
       }
