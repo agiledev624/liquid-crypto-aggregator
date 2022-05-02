@@ -771,77 +771,77 @@ export const getNetworkConnectors = t => {
           },
         },
       };
-    case 250:
-      return {
-        network: 'fantom',
-        // cacheProvider: true,
-        providerOptions: {
-          injected: {
-            display: {
-              name: 'MetaMask',
-            },
-          },
-          'custom-wc-ftm': {
-            display: {
-              logo: require(`images/wallets/wallet-connect.svg`),
-              name: 'Wallet Connect',
-              description: t('Scan your WalletConnect to Connect'),
-            },
-            package: WalletConnectProvider,
-            options: {
-              rpc: {
-                1: 'https://rpc.ftm.tools/',
-                250: 'https://rpc.ftm.tools/',
-              },
-            },
-            connector: async (ProviderPackage, options) => {
-              const provider = new ProviderPackage(options);
+    // case 250:
+    //   return {
+    //     network: 'fantom',
+    //     // cacheProvider: true,
+    //     providerOptions: {
+    //       injected: {
+    //         display: {
+    //           name: 'MetaMask',
+    //         },
+    //       },
+    //       'custom-wc-ftm': {
+    //         display: {
+    //           logo: require(`images/wallets/wallet-connect.svg`),
+    //           name: 'Wallet Connect',
+    //           description: t('Scan your WalletConnect to Connect'),
+    //         },
+    //         package: WalletConnectProvider,
+    //         options: {
+    //           rpc: {
+    //             1: 'https://rpc.ftm.tools/',
+    //             250: 'https://rpc.ftm.tools/',
+    //           },
+    //         },
+    //         connector: async (ProviderPackage, options) => {
+    //           const provider = new ProviderPackage(options);
 
-              await provider.enable();
+    //           await provider.enable();
 
-              return provider;
-            },
-          },
-          'custom-clover-fantom': {
-            display: {
-              logo: require(`images/wallets/clover.png`),
-              name: 'Clover Wallet',
-              description: t('Connect with your Clover wallet and earn CLV'),
-            },
-            options: {
-              supportedChainIds: [250],
-            },
-            package: CloverConnector,
-            connector: async (ProviderPackage, options) => {
-              const provider = new ProviderPackage(options);
-              await provider.activate();
-              return provider.getProvider();
-            },
-          },
-          'custom-cb-ftm': {
-            display: {
-              logo: require(`images/wallets/coinbase.png`),
-              name: 'Coinbase Wallet',
-              description: t('Connect to your Coinbase Wallet'),
-            },
-            options: {
-              appName: 'Liquid Crypto',
-              appLogoUrl: 'https://www.liquid-crypto.io/images/logo.png',
-              darkMode: false,
-            },
-            package: WalletLink,
-            connector: async (ProviderPackage, options) => {
-              const walletLink = new ProviderPackage(options);
+    //           return provider;
+    //         },
+    //       },
+    //       'custom-clover-fantom': {
+    //         display: {
+    //           logo: require(`images/wallets/clover.png`),
+    //           name: 'Clover Wallet',
+    //           description: t('Connect with your Clover wallet and earn CLV'),
+    //         },
+    //         options: {
+    //           supportedChainIds: [250],
+    //         },
+    //         package: CloverConnector,
+    //         connector: async (ProviderPackage, options) => {
+    //           const provider = new ProviderPackage(options);
+    //           await provider.activate();
+    //           return provider.getProvider();
+    //         },
+    //       },
+    //       'custom-cb-ftm': {
+    //         display: {
+    //           logo: require(`images/wallets/coinbase.png`),
+    //           name: 'Coinbase Wallet',
+    //           description: t('Connect to your Coinbase Wallet'),
+    //         },
+    //         options: {
+    //           appName: 'Liquid Crypto',
+    //           appLogoUrl: 'https://www.liquid-crypto.io/images/logo.png',
+    //           darkMode: false,
+    //         },
+    //         package: WalletLink,
+    //         connector: async (ProviderPackage, options) => {
+    //           const walletLink = new ProviderPackage(options);
 
-              const provider = walletLink.makeWeb3Provider('https://rpc.ftm.tools/', 250);
+    //           const provider = walletLink.makeWeb3Provider('https://rpc.ftm.tools/', 250);
 
-              await provider.enable();
+    //           await provider.enable();
 
-              return provider;
-            },
-          },
-        },
-      };
+    //           return provider;
+    //         },
+    //       },
+    //     },
+    //   };
     case 1666600000:
       return {
         network: 'harmony',
