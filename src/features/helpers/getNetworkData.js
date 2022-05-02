@@ -501,7 +501,21 @@ export const getNetworkConnectors = t => {
             package: WalletConnectProvider,
             options: {
               rpc: {
+                // 1: 'https://rpc.ankr.com/eth/',
                 1: 'https://rpc.ankr.com/eth/',
+                56: 'https://bsc-dataseed.binance.org/',
+                128: 'https://http-mainnet.hecochain.com',
+                43114: 'https://api.avax.network/ext/bc/C/rpc',
+                137: 'https://polygon-rpc.com/',
+                250: 'https://rpc.ftm.tools/',
+                1666600000: 'https://api.harmony.one/',
+                42161: 'https://arb1.arbitrum.io/rpc',
+                1285: 'https://rpc.moonriver.moonbeam.network',
+                42220: 'https://forno.celo.org',
+                25: 'https://evm-cronos.crypto.org/',
+                122: 'https://rpc.fuse.io',
+                1088: 'https://andromeda.metis.io/?owner=1088',
+                1284: 'https://rpc.api.moonbeam.network',
                 // 56: 'https://bsc-dataseed.binance.org/',
               },
             },
@@ -522,8 +536,22 @@ export const getNetworkConnectors = t => {
             package: WalletConnectProvider,
             options: {
               rpc: {
-                1: 'https://bsc-dataseed.binance.org/',
+                1: 'https://rpc.ankr.com/eth/',
                 56: 'https://bsc-dataseed.binance.org/',
+                128: 'https://http-mainnet.hecochain.com',
+                43114: 'https://api.avax.network/ext/bc/C/rpc',
+                137: 'https://polygon-rpc.com/',
+                250: 'https://rpc.ftm.tools/',
+                1666600000: 'https://api.harmony.one/',
+                42161: 'https://arb1.arbitrum.io/rpc',
+                1285: 'https://rpc.moonriver.moonbeam.network',
+                42220: 'https://forno.celo.org',
+                25: 'https://evm-cronos.crypto.org/',
+                122: 'https://rpc.fuse.io',
+                1088: 'https://andromeda.metis.io/?owner=1088',
+                1284: 'https://rpc.api.moonbeam.network',
+                // 1: 'https://bsc-dataseed.binance.org/',
+                // 56: 'https://bsc-dataseed.binance.org/',
               },
             },
           },
@@ -621,8 +649,22 @@ export const getNetworkConnectors = t => {
             package: WalletConnectProvider,
             options: {
               rpc: {
-                1: 'https://http-mainnet.hecochain.com',
+                // 1: 'https://http-mainnet.hecochain.com',
+                // 128: 'https://http-mainnet.hecochain.com',
+                1: 'https://rpc.ankr.com/eth/',
+                56: 'https://bsc-dataseed.binance.org/',
                 128: 'https://http-mainnet.hecochain.com',
+                43114: 'https://api.avax.network/ext/bc/C/rpc',
+                137: 'https://polygon-rpc.com/',
+                250: 'https://rpc.ftm.tools/',
+                1666600000: 'https://api.harmony.one/',
+                42161: 'https://arb1.arbitrum.io/rpc',
+                1285: 'https://rpc.moonriver.moonbeam.network',
+                42220: 'https://forno.celo.org',
+                25: 'https://evm-cronos.crypto.org/',
+                122: 'https://rpc.fuse.io',
+                1088: 'https://andromeda.metis.io/?owner=1088',
+                1284: 'https://rpc.api.moonbeam.network',
               },
             },
           },
@@ -672,8 +714,22 @@ export const getNetworkConnectors = t => {
             package: WalletConnectProvider,
             options: {
               rpc: {
-                1: 'https://api.avax.network/ext/bc/C/rpc',
+                1: 'https://rpc.ankr.com/eth/',
+                56: 'https://bsc-dataseed.binance.org/',
+                128: 'https://http-mainnet.hecochain.com',
                 43114: 'https://api.avax.network/ext/bc/C/rpc',
+                137: 'https://polygon-rpc.com/',
+                250: 'https://rpc.ftm.tools/',
+                1666600000: 'https://api.harmony.one/',
+                42161: 'https://arb1.arbitrum.io/rpc',
+                1285: 'https://rpc.moonriver.moonbeam.network',
+                42220: 'https://forno.celo.org',
+                25: 'https://evm-cronos.crypto.org/',
+                122: 'https://rpc.fuse.io',
+                1088: 'https://andromeda.metis.io/?owner=1088',
+                1284: 'https://rpc.api.moonbeam.network',
+                // 1: 'https://api.avax.network/ext/bc/C/rpc',
+                // 43114: 'https://api.avax.network/ext/bc/C/rpc',
               },
             },
             connector: async (ProviderPackage, options) => {
@@ -726,8 +782,22 @@ export const getNetworkConnectors = t => {
             options: {
               network: 'matic',
               rpc: {
-                1: 'https://polygon-rpc.com/',
+                1: 'https://rpc.ankr.com/eth/',
+                56: 'https://bsc-dataseed.binance.org/',
+                128: 'https://http-mainnet.hecochain.com',
+                43114: 'https://api.avax.network/ext/bc/C/rpc',
                 137: 'https://polygon-rpc.com/',
+                250: 'https://rpc.ftm.tools/',
+                1666600000: 'https://api.harmony.one/',
+                42161: 'https://arb1.arbitrum.io/rpc',
+                1285: 'https://rpc.moonriver.moonbeam.network',
+                42220: 'https://forno.celo.org',
+                25: 'https://evm-cronos.crypto.org/',
+                122: 'https://rpc.fuse.io',
+                1088: 'https://andromeda.metis.io/?owner=1088',
+                1284: 'https://rpc.api.moonbeam.network',
+                // 1: 'https://polygon-rpc.com/',
+                // 137: 'https://polygon-rpc.com/',
               },
             },
           },
@@ -771,77 +841,91 @@ export const getNetworkConnectors = t => {
           },
         },
       };
-    // case 250:
-    //   return {
-    //     network: 'fantom',
-    //     // cacheProvider: true,
-    //     providerOptions: {
-    //       injected: {
-    //         display: {
-    //           name: 'MetaMask',
-    //         },
-    //       },
-    //       'custom-wc-ftm': {
-    //         display: {
-    //           logo: require(`images/wallets/wallet-connect.svg`),
-    //           name: 'Wallet Connect',
-    //           description: t('Scan your WalletConnect to Connect'),
-    //         },
-    //         package: WalletConnectProvider,
-    //         options: {
-    //           rpc: {
-    //             1: 'https://rpc.ftm.tools/',
-    //             250: 'https://rpc.ftm.tools/',
-    //           },
-    //         },
-    //         connector: async (ProviderPackage, options) => {
-    //           const provider = new ProviderPackage(options);
+    case 250:
+      return {
+        network: 'fantom',
+        // cacheProvider: true,
+        providerOptions: {
+          injected: {
+            display: {
+              name: 'MetaMask',
+            },
+          },
+          'custom-wc-ftm': {
+            display: {
+              logo: require(`images/wallets/wallet-connect.svg`),
+              name: 'Wallet Connect',
+              description: t('Scan your WalletConnect to Connect'),
+            },
+            package: WalletConnectProvider,
+            options: {
+              rpc: {
+                1: 'https://rpc.ankr.com/eth/',
+                56: 'https://bsc-dataseed.binance.org/',
+                128: 'https://http-mainnet.hecochain.com',
+                43114: 'https://api.avax.network/ext/bc/C/rpc',
+                137: 'https://polygon-rpc.com/',
+                250: 'https://rpc.ftm.tools/',
+                1666600000: 'https://api.harmony.one/',
+                42161: 'https://arb1.arbitrum.io/rpc',
+                1285: 'https://rpc.moonriver.moonbeam.network',
+                42220: 'https://forno.celo.org',
+                25: 'https://evm-cronos.crypto.org/',
+                122: 'https://rpc.fuse.io',
+                1088: 'https://andromeda.metis.io/?owner=1088',
+                1284: 'https://rpc.api.moonbeam.network',
+                // 1: 'https://rpc.ftm.tools/',
+                // 250: 'https://rpc.ftm.tools/',
+              },
+            },
+            connector: async (ProviderPackage, options) => {
+              const provider = new ProviderPackage(options);
 
-    //           await provider.enable();
+              await provider.enable();
 
-    //           return provider;
-    //         },
-    //       },
-    //       'custom-clover-fantom': {
-    //         display: {
-    //           logo: require(`images/wallets/clover.png`),
-    //           name: 'Clover Wallet',
-    //           description: t('Connect with your Clover wallet and earn CLV'),
-    //         },
-    //         options: {
-    //           supportedChainIds: [250],
-    //         },
-    //         package: CloverConnector,
-    //         connector: async (ProviderPackage, options) => {
-    //           const provider = new ProviderPackage(options);
-    //           await provider.activate();
-    //           return provider.getProvider();
-    //         },
-    //       },
-    //       'custom-cb-ftm': {
-    //         display: {
-    //           logo: require(`images/wallets/coinbase.png`),
-    //           name: 'Coinbase Wallet',
-    //           description: t('Connect to your Coinbase Wallet'),
-    //         },
-    //         options: {
-    //           appName: 'Liquid Crypto',
-    //           appLogoUrl: 'https://www.liquid-crypto.io/images/logo.png',
-    //           darkMode: false,
-    //         },
-    //         package: WalletLink,
-    //         connector: async (ProviderPackage, options) => {
-    //           const walletLink = new ProviderPackage(options);
+              return provider;
+            },
+          },
+          'custom-clover-fantom': {
+            display: {
+              logo: require(`images/wallets/clover.png`),
+              name: 'Clover Wallet',
+              description: t('Connect with your Clover wallet and earn CLV'),
+            },
+            options: {
+              supportedChainIds: [250],
+            },
+            package: CloverConnector,
+            connector: async (ProviderPackage, options) => {
+              const provider = new ProviderPackage(options);
+              await provider.activate();
+              return provider.getProvider();
+            },
+          },
+          'custom-cb-ftm': {
+            display: {
+              logo: require(`images/wallets/coinbase.png`),
+              name: 'Coinbase Wallet',
+              description: t('Connect to your Coinbase Wallet'),
+            },
+            options: {
+              appName: 'Liquid Crypto',
+              appLogoUrl: 'https://www.liquid-crypto.io/images/logo.png',
+              darkMode: false,
+            },
+            package: WalletLink,
+            connector: async (ProviderPackage, options) => {
+              const walletLink = new ProviderPackage(options);
 
-    //           const provider = walletLink.makeWeb3Provider('https://rpc.ftm.tools/', 250);
+              const provider = walletLink.makeWeb3Provider('https://rpc.ftm.tools/', 250);
 
-    //           await provider.enable();
+              await provider.enable();
 
-    //           return provider;
-    //         },
-    //       },
-    //     },
-    //   };
+              return provider;
+            },
+          },
+        },
+      };
     case 1666600000:
       return {
         network: 'harmony',
@@ -861,8 +945,22 @@ export const getNetworkConnectors = t => {
             package: WalletConnectProvider,
             options: {
               rpc: {
-                1: 'https://api.harmony.one/',
+                1: 'https://rpc.ankr.com/eth/',
+                56: 'https://bsc-dataseed.binance.org/',
+                128: 'https://http-mainnet.hecochain.com',
+                43114: 'https://api.avax.network/ext/bc/C/rpc',
+                137: 'https://polygon-rpc.com/',
+                250: 'https://rpc.ftm.tools/',
                 1666600000: 'https://api.harmony.one/',
+                42161: 'https://arb1.arbitrum.io/rpc',
+                1285: 'https://rpc.moonriver.moonbeam.network',
+                42220: 'https://forno.celo.org',
+                25: 'https://evm-cronos.crypto.org/',
+                122: 'https://rpc.fuse.io',
+                1088: 'https://andromeda.metis.io/?owner=1088',
+                1284: 'https://rpc.api.moonbeam.network',
+                // 1: 'https://api.harmony.one/',
+                // 1666600000: 'https://api.harmony.one/',
               },
             },
             connector: async (ProviderPackage, options) => {
@@ -894,8 +992,22 @@ export const getNetworkConnectors = t => {
             package: WalletConnectProvider,
             options: {
               rpc: {
-                1: 'https://arb1.arbitrum.io/rpc',
+                1: 'https://rpc.ankr.com/eth/',
+                56: 'https://bsc-dataseed.binance.org/',
+                128: 'https://http-mainnet.hecochain.com',
+                43114: 'https://api.avax.network/ext/bc/C/rpc',
+                137: 'https://polygon-rpc.com/',
+                250: 'https://rpc.ftm.tools/',
+                1666600000: 'https://api.harmony.one/',
                 42161: 'https://arb1.arbitrum.io/rpc',
+                1285: 'https://rpc.moonriver.moonbeam.network',
+                42220: 'https://forno.celo.org',
+                25: 'https://evm-cronos.crypto.org/',
+                122: 'https://rpc.fuse.io',
+                1088: 'https://andromeda.metis.io/?owner=1088',
+                1284: 'https://rpc.api.moonbeam.network',
+                // 1: 'https://arb1.arbitrum.io/rpc',
+                // 42161: 'https://arb1.arbitrum.io/rpc',
               },
             },
             connector: async (ProviderPackage, options) => {
@@ -949,8 +1061,22 @@ export const getNetworkConnectors = t => {
             package: WalletConnectProvider,
             options: {
               rpc: {
-                1: 'https://rpc.moonriver.moonbeam.network',
+                1: 'https://rpc.ankr.com/eth/',
+                56: 'https://bsc-dataseed.binance.org/',
+                128: 'https://http-mainnet.hecochain.com',
+                43114: 'https://api.avax.network/ext/bc/C/rpc',
+                137: 'https://polygon-rpc.com/',
+                250: 'https://rpc.ftm.tools/',
+                1666600000: 'https://api.harmony.one/',
+                42161: 'https://arb1.arbitrum.io/rpc',
                 1285: 'https://rpc.moonriver.moonbeam.network',
+                42220: 'https://forno.celo.org',
+                25: 'https://evm-cronos.crypto.org/',
+                122: 'https://rpc.fuse.io',
+                1088: 'https://andromeda.metis.io/?owner=1088',
+                1284: 'https://rpc.api.moonbeam.network',
+                // 1: 'https://rpc.moonriver.moonbeam.network',
+                // 1285: 'https://rpc.moonriver.moonbeam.network',
               },
             },
             connector: async (ProviderPackage, options) => {
@@ -982,8 +1108,22 @@ export const getNetworkConnectors = t => {
             package: WalletConnectProvider,
             options: {
               rpc: {
-                1: 'https://forno.celo.org',
+                1: 'https://rpc.ankr.com/eth/',
+                56: 'https://bsc-dataseed.binance.org/',
+                128: 'https://http-mainnet.hecochain.com',
+                43114: 'https://api.avax.network/ext/bc/C/rpc',
+                137: 'https://polygon-rpc.com/',
+                250: 'https://rpc.ftm.tools/',
+                1666600000: 'https://api.harmony.one/',
+                42161: 'https://arb1.arbitrum.io/rpc',
+                1285: 'https://rpc.moonriver.moonbeam.network',
                 42220: 'https://forno.celo.org',
+                25: 'https://evm-cronos.crypto.org/',
+                122: 'https://rpc.fuse.io',
+                1088: 'https://andromeda.metis.io/?owner=1088',
+                1284: 'https://rpc.api.moonbeam.network',
+                // 1: 'https://forno.celo.org',
+                // 42220: 'https://forno.celo.org',
               },
             },
             connector: async (ProviderPackage, options) => {
@@ -1003,8 +1143,22 @@ export const getNetworkConnectors = t => {
             package: WalletConnectProvider,
             options: {
               rpc: {
-                1: 'https://forno.celo.org',
+                1: 'https://rpc.ankr.com/eth/',
+                56: 'https://bsc-dataseed.binance.org/',
+                128: 'https://http-mainnet.hecochain.com',
+                43114: 'https://api.avax.network/ext/bc/C/rpc',
+                137: 'https://polygon-rpc.com/',
+                250: 'https://rpc.ftm.tools/',
+                1666600000: 'https://api.harmony.one/',
+                42161: 'https://arb1.arbitrum.io/rpc',
+                1285: 'https://rpc.moonriver.moonbeam.network',
                 42220: 'https://forno.celo.org',
+                25: 'https://evm-cronos.crypto.org/',
+                122: 'https://rpc.fuse.io',
+                1088: 'https://andromeda.metis.io/?owner=1088',
+                1284: 'https://rpc.api.moonbeam.network',
+                // 1: 'https://forno.celo.org',
+                // 42220: 'https://forno.celo.org',
               },
             },
             connector: async (ProviderPackage, options) => {
@@ -1063,8 +1217,22 @@ export const getNetworkConnectors = t => {
             package: WalletConnectProvider,
             options: {
               rpc: {
-                1: 'https://evm-cronos.crypto.org/',
+                1: 'https://rpc.ankr.com/eth/',
+                56: 'https://bsc-dataseed.binance.org/',
+                128: 'https://http-mainnet.hecochain.com',
+                43114: 'https://api.avax.network/ext/bc/C/rpc',
+                137: 'https://polygon-rpc.com/',
+                250: 'https://rpc.ftm.tools/',
+                1666600000: 'https://api.harmony.one/',
+                42161: 'https://arb1.arbitrum.io/rpc',
+                1285: 'https://rpc.moonriver.moonbeam.network',
+                42220: 'https://forno.celo.org',
                 25: 'https://evm-cronos.crypto.org/',
+                122: 'https://rpc.fuse.io',
+                1088: 'https://andromeda.metis.io/?owner=1088',
+                1284: 'https://rpc.api.moonbeam.network',
+                // 1: 'https://evm-cronos.crypto.org/',
+                // 25: 'https://evm-cronos.crypto.org/',
               },
             },
             connector: async (ProviderPackage, options) => {
@@ -1096,8 +1264,22 @@ export const getNetworkConnectors = t => {
             package: WalletConnectProvider,
             options: {
               rpc: {
-                1: 'https://rpc.fuse.io',
+                1: 'https://rpc.ankr.com/eth/',
+                56: 'https://bsc-dataseed.binance.org/',
+                128: 'https://http-mainnet.hecochain.com',
+                43114: 'https://api.avax.network/ext/bc/C/rpc',
+                137: 'https://polygon-rpc.com/',
+                250: 'https://rpc.ftm.tools/',
+                1666600000: 'https://api.harmony.one/',
+                42161: 'https://arb1.arbitrum.io/rpc',
+                1285: 'https://rpc.moonriver.moonbeam.network',
+                42220: 'https://forno.celo.org',
+                25: 'https://evm-cronos.crypto.org/',
                 122: 'https://rpc.fuse.io',
+                1088: 'https://andromeda.metis.io/?owner=1088',
+                1284: 'https://rpc.api.moonbeam.network',
+                // 1: 'https://rpc.fuse.io',
+                // 122: 'https://rpc.fuse.io',
               },
             },
             connector: async (ProviderPackage, options) => {
@@ -1117,8 +1299,22 @@ export const getNetworkConnectors = t => {
             package: WalletConnectProvider,
             options: {
               rpc: {
-                1: 'https://rpc.fuse.io',
+                1: 'https://rpc.ankr.com/eth/',
+                56: 'https://bsc-dataseed.binance.org/',
+                128: 'https://http-mainnet.hecochain.com',
+                43114: 'https://api.avax.network/ext/bc/C/rpc',
+                137: 'https://polygon-rpc.com/',
+                250: 'https://rpc.ftm.tools/',
+                1666600000: 'https://api.harmony.one/',
+                42161: 'https://arb1.arbitrum.io/rpc',
+                1285: 'https://rpc.moonriver.moonbeam.network',
+                42220: 'https://forno.celo.org',
+                25: 'https://evm-cronos.crypto.org/',
                 122: 'https://rpc.fuse.io',
+                1088: 'https://andromeda.metis.io/?owner=1088',
+                1284: 'https://rpc.api.moonbeam.network',
+                // 1: 'https://rpc.fuse.io',
+                // 122: 'https://rpc.fuse.io',
               },
             },
             connector: async (ProviderPackage, options) => {
@@ -1150,8 +1346,22 @@ export const getNetworkConnectors = t => {
             package: WalletConnectProvider,
             options: {
               rpc: {
-                1: 'https://andromeda.metis.io/?owner=1088',
+                1: 'https://rpc.ankr.com/eth/',
+                56: 'https://bsc-dataseed.binance.org/',
+                128: 'https://http-mainnet.hecochain.com',
+                43114: 'https://api.avax.network/ext/bc/C/rpc',
+                137: 'https://polygon-rpc.com/',
+                250: 'https://rpc.ftm.tools/',
+                1666600000: 'https://api.harmony.one/',
+                42161: 'https://arb1.arbitrum.io/rpc',
+                1285: 'https://rpc.moonriver.moonbeam.network',
+                42220: 'https://forno.celo.org',
+                25: 'https://evm-cronos.crypto.org/',
+                122: 'https://rpc.fuse.io',
                 1088: 'https://andromeda.metis.io/?owner=1088',
+                1284: 'https://rpc.api.moonbeam.network',
+                // 1: 'https://andromeda.metis.io/?owner=1088',
+                // 1088: 'https://andromeda.metis.io/?owner=1088',
               },
             },
             connector: async (ProviderPackage, options) => {
@@ -1178,7 +1388,21 @@ export const getNetworkConnectors = t => {
           package: WalletConnectProvider,
           options: {
             rpc: {
-              1: 'https://rpc.api.moonbeam.network',
+              // 1: 'https://rpc.api.moonbeam.network',
+              // 1284: 'https://rpc.api.moonbeam.network',
+              1: 'https://rpc.ankr.com/eth/',
+              56: 'https://bsc-dataseed.binance.org/',
+              128: 'https://http-mainnet.hecochain.com',
+              43114: 'https://api.avax.network/ext/bc/C/rpc',
+              137: 'https://polygon-rpc.com/',
+              250: 'https://rpc.ftm.tools/',
+              1666600000: 'https://api.harmony.one/',
+              42161: 'https://arb1.arbitrum.io/rpc',
+              1285: 'https://rpc.moonriver.moonbeam.network',
+              42220: 'https://forno.celo.org',
+              25: 'https://evm-cronos.crypto.org/',
+              122: 'https://rpc.fuse.io',
+              1088: 'https://andromeda.metis.io/?owner=1088',
               1284: 'https://rpc.api.moonbeam.network',
             },
           },
