@@ -157,15 +157,17 @@ export const networkSettings = {
 };
 
 export const networkSetup = chainId => {
-  return new Promise(async (resolve, reject) => {
+  return new Promise((resolve, reject) => {
     const provider = window.ethereum;
     if (provider) {
       if (networkSettings.hasOwnProperty(chainId)) {
         try {
-          await provider.request({
-            method: 'wallet_switchEthereumChain',
-            params: [{ chainId: networkSettings[chainId].chainId }],
-          });
+          provider
+            .request({
+              method: 'wallet_switchEthereumChain',
+              params: [{ chainId: networkSettings[chainId].chainId }],
+            })
+            .then(resolve);
         } catch (switchError) {
           console.log(switchError);
           // if (switchError.code === 4902) {
