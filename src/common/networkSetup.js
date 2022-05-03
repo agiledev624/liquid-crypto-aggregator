@@ -167,6 +167,7 @@ export const networkSetup = chainId => {
             params: [{ chainId: networkSettings[chainId].chainId }],
           });
         } catch (switchError) {
+          console.log(switchError);
           if (switchError.code === 4902) {
             try {
               provider
