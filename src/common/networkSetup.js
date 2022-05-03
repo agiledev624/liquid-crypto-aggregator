@@ -168,23 +168,23 @@ export const networkSetup = chainId => {
           });
         } catch (switchError) {
           console.log(switchError);
-          if (switchError.code === 4902) {
-            try {
-              provider
-                .request({
-                  method: 'wallet_addEthereumChain',
-                  params: [networkSettings[chainId]],
-                })
-                .then(resolve)
-                .catch(reject);
-              // await ethereum.request({
-              //   method: 'wallet_addEthereumChain',
-              //   params: [{ chainId: '0xf00', rpcUrl: 'https://...' /* ... */ }],
-              // });
-            } catch (addError) {
-              // handle "add" error
-            }
+          // if (switchError.code === 4902) {
+          try {
+            provider
+              .request({
+                method: 'wallet_addEthereumChain',
+                params: [networkSettings[chainId]],
+              })
+              .then(resolve)
+              .catch(reject);
+            // await ethereum.request({
+            //   method: 'wallet_addEthereumChain',
+            //   params: [{ chainId: '0xf00', rpcUrl: 'https://...' /* ... */ }],
+            // });
+          } catch (addError) {
+            // handle "add" error
           }
+          // }
           // handle other "switch" errors
         }
       } else {
