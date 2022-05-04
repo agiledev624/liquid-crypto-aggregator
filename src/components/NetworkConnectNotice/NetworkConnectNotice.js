@@ -136,6 +136,30 @@ export function NetworkConnectNotice({
               {t('Network-DisconnectWallet')}
             </Button>
           </div> */}
+          <div className={classes.message}>
+            {t('Network-ConnectionRequired', { network: targetNetworkFriendlyName })}
+          </div>
+          <div className={classes.actions}>
+            <Button onClick={connectWallet} className={classes.button}>
+              {t('Network-ConnectWallet')}
+            </Button>
+          </div>
+          <div className={classes.actions}>
+            {/* <Button onClick={targetNetworkSetup} className={classes.button}>
+              {t('Network-SwitchToNetwork', { network: targetNetworkFriendlyName })}
+            </Button> */}
+            {isSupportedNetwork ? (
+              <Button
+                onClick={() => networkRedirect(supportedNetwork.url)}
+                className={classes.button}
+              >
+                {t('Network-GoToApp', { network: supportedNetwork.name })}
+              </Button>
+            ) : null}
+            <Button onClick={disconnectWallet} className={classes.button}>
+              {t('Network-DisconnectWallet')}
+            </Button>
+          </div>
           <div className={classes.note}>
             <h3>{t('Network-SwitchInstruction', { network: targetNetworkFriendlyName })}</h3>
           </div>
