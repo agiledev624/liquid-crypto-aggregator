@@ -90,7 +90,8 @@ export default function App({ children }) {
                   disconnectWallet={disconnectWalletCallback}
                   networkId={networkId}
                 />
-                {networkId === window.REACT_APP_NETWORK_ID ? children : null}
+                {/* {networkId === window.REACT_APP_NETWORK_ID ? children : null} */}
+                {children}
                 <Notifier />
               </div>
             </div>
