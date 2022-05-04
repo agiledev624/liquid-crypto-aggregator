@@ -25,7 +25,7 @@ const styles = theme => ({
   },
   note: {
     marginBottom: 15,
-    fontStyle: 'italic',
+    // fontStyle: 'italic',
   },
   error: {
     color: 'red',
