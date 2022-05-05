@@ -104,7 +104,7 @@ export default function App({ children }) {
                   networkId={networkId}
                 />
                 {networkId === window.REACT_APP_NETWORK_ID ? children : null}
-                {children}
+                {/* {children} */}
                 <Notifier />
               </div>
             </div>
