@@ -114,7 +114,7 @@ export function NetworkConnectNotice({
         </>
       );
     } else {
-      alert(`Please switch to ${targetNetworkFriendlyName} network.`);
+      // alert(`Please switch to ${targetNetworkFriendlyName} network.`);
       notice = (
         <>
           <div className={classes.message}>
