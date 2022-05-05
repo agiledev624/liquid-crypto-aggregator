@@ -54,13 +54,13 @@ export default function App({ children }) {
   //   }
   // }, [web3Modal, connectWallet]);
 
-  const connectWalletCallback = useCallback(() => {
+  const connectWalletCallback = () => {
     const targetNetworkId = window.REACT_APP_NETWORK_ID;
     const isCorrectNetwork = networkId === targetNetworkId;
     const targetNetworkFriendlyName = getNetworkFriendlyName(targetNetworkId);
     if (!isCorrectNetwork) alert(`Please switch to ${targetNetworkFriendlyName} network.`);
     else connectWallet(web3Modal);
-  }, [web3Modal, connectWallet, networkId]);
+  };
 
   const disconnectWalletCallback = useCallback(() => {
     disconnectWallet(web3, web3Modal);
