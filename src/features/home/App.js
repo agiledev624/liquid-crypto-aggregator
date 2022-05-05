@@ -63,8 +63,10 @@ export default function App({ children }) {
       const targetNetworkId = window.REACT_APP_NETWORK_ID;
       const isCorrectNetwork = networkId === targetNetworkId;
       const targetNetworkFriendlyName = getNetworkFriendlyName(networkId);
-      if (!isCorrectNetwork) alert(`Please switch to ${targetNetworkFriendlyName} network.`);
-      else connectWallet(web3Modal);
+      if (!isCorrectNetwork) {
+        alert(`Please switch to ${targetNetworkFriendlyName} network.`);
+        disconnectWalletCallback();
+      } else connectWallet(web3Modal);
     }
   }, [web3Modal, connectWallet, networkId]);
 
