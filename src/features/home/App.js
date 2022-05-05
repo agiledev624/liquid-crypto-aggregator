@@ -14,6 +14,7 @@ import { useConnectWallet, useDisconnectWallet } from './redux/hooks';
 import useNightMode from './hooks/useNightMode';
 import createThemeMode from './jss/appTheme';
 import { useLocation } from 'react-router';
+import { getNetworkFriendlyName } from 'features/helpers/getNetworkData.js';
 
 const themes = { light: null, dark: null };
 const getTheme = mode => {
@@ -54,8 +55,12 @@ export default function App({ children }) {
   // }, [web3Modal, connectWallet]);
 
   const connectWalletCallback = useCallback(() => {
-    connectWallet(web3Modal);
-  }, [web3Modal, connectWallet]);
+    const targetNetworkId = window.REACT_APP_NETWORK_ID;
+    const isCorrectNetwork = networkId === targetNetworkId;
+    const targetNetworkFriendlyName = getNetworkFriendlyName(targetNetworkId);
+    if (!isCorrectNetwork) alert(`Please switch to ${targetNetworkFriendlyName} network.`);
+    else connectWallet(web3Modal);
+  }, [web3Modal, connectWallet, networkId]);
 
   const disconnectWalletCallback = useCallback(() => {
     disconnectWallet(web3, web3Modal);
@@ -90,8 +95,8 @@ export default function App({ children }) {
                   disconnectWallet={disconnectWalletCallback}
                   networkId={networkId}
                 />
-                {/* {networkId === window.REACT_APP_NETWORK_ID ? children : null} */}
-                {children}
+                {networkId === window.REACT_APP_NETWORK_ID ? children : null}
+                {/* {children} */}
                 <Notifier />
               </div>
             </div>
