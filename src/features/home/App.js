@@ -54,13 +54,19 @@ export default function App({ children }) {
   //   }
   // }, [web3Modal, connectWallet]);
 
-  const connectWalletCallback = () => {
-    const targetNetworkId = window.REACT_APP_NETWORK_ID;
-    const isCorrectNetwork = networkId === targetNetworkId;
-    const targetNetworkFriendlyName = getNetworkFriendlyName(targetNetworkId);
-    if (!isCorrectNetwork) alert(`Please switch to ${targetNetworkFriendlyName} network.`);
-    else connectWallet(web3Modal);
-  };
+  const connectWalletCallback = useCallback(() => {
+    var UA = navigator.userAgent;
+    const isiPhoneBrowser = /\b(BlackBerry|webOS|iPhone|IEMobile)\b/i.test(UA);
+    if (!isiPhoneBrowser) {
+      connectWallet(web3Modal);
+    } else {
+      const targetNetworkId = window.REACT_APP_NETWORK_ID;
+      const isCorrectNetwork = networkId === targetNetworkId;
+      const targetNetworkFriendlyName = getNetworkFriendlyName(networkId);
+      if (!isCorrectNetwork) alert(`Please switch to ${targetNetworkFriendlyName} network.`);
+      else connectWallet(web3Modal);
+    }
+  }, [web3Modal, connectWallet, networkId]);
 
   const disconnectWalletCallback = useCallback(() => {
     disconnectWallet(web3, web3Modal);
@@ -96,7 +102,7 @@ export default function App({ children }) {
                   networkId={networkId}
                 />
                 {networkId === window.REACT_APP_NETWORK_ID ? children : null}
-                {/* {children} */}
+                {children}
                 <Notifier />
               </div>
             </div>

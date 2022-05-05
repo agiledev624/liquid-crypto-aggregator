@@ -80,97 +80,96 @@ export function NetworkConnectNotice({
         </div>
       </>
     );
-    // } else if (!isCorrectNetwork) {
-    //   var UA = navigator.userAgent;
-    //   const isiPhoneBrowser = /\b(BlackBerry|webOS|iPhone|IEMobile)\b/i.test(UA);
-    //   // if (!isiPhoneBrowser) {
-    //   if (true) {
-    //     notice = (
-    //       <>
-    //         <div className={classes.message}>
-    //           {t('Network-Supports', { network: targetNetworkFriendlyName })}{' '}
-    //           {isSupportedNetwork
-    //             ? t('Network-ConnectedTo', { network: supportedNetwork.name })
-    //             : t('Network-ConnectedUnsupported')}
-    //         </div>
-    //         <div className={classes.actions}>
-    //           <Button onClick={targetNetworkSetup} className={classes.button}>
-    //             {t('Network-SwitchToNetwork', { network: targetNetworkFriendlyName })}
-    //           </Button>
-    //           {isSupportedNetwork ? (
-    //             <Button
-    //               onClick={() => networkRedirect(supportedNetwork.url)}
-    //               className={classes.button}
-    //             >
-    //               {t('Network-GoToApp', { network: supportedNetwork.name })}
-    //             </Button>
-    //           ) : null}
-    //           <Button onClick={disconnectWallet} className={classes.button}>
-    //             {t('Network-DisconnectWallet')}
-    //           </Button>
-    //         </div>
-    //         <div className={classes.note}>{t('Network-SwitchNote')}</div>
-    //         {/* {networkSetupError ? <div className={classes.error}>{networkSetupError}</div> : ''} */}
-    //       </>
-    //     );
-    //   }
-    //   else {
-    //     alert(`Please switch to ${targetNetworkFriendlyName} network.`);
-    //     notice = (
-    //       <>
-    //         <div className={classes.message}>
-    //           {t('Network-Supports', { network: targetNetworkFriendlyName })}{' '}
-    //           {isSupportedNetwork
-    //             ? t('Network-ConnectedTo', { network: supportedNetwork.name })
-    //             : t('Network-ConnectedUnsupported')}
-    //         </div>
-    //         {/* <div className={classes.actions}>
-    //           <Button onClick={targetNetworkSetup} className={classes.button}>
-    //             {t('Network-SwitchToNetwork', { network: targetNetworkFriendlyName })}
-    //           </Button>
-    //           {isSupportedNetwork ? (
-    //             <Button
-    //               onClick={() => networkRedirect(supportedNetwork.url)}
-    //               className={classes.button}
-    //             >
-    //               {t('Network-GoToApp', { network: supportedNetwork.name })}
-    //             </Button>
-    //           ) : null}
-    //           <Button onClick={disconnectWallet} className={classes.button}>
-    //             {t('Network-DisconnectWallet')}
-    //           </Button>
-    //         </div> */}
-    //         <div className={classes.message}>
-    //           {t('Network-ConnectionRequired', { network: targetNetworkFriendlyName })}
-    //         </div>
-    //         <div className={classes.actions}>
-    //           <Button onClick={connectWallet} className={classes.button}>
-    //             {t('Network-ConnectWallet')}
-    //           </Button>
-    //         </div>
-    //         <div className={classes.actions}>
-    //           {/* <Button onClick={targetNetworkSetup} className={classes.button}>
-    //             {t('Network-SwitchToNetwork', { network: targetNetworkFriendlyName })}
-    //           </Button> */}
-    //           {isSupportedNetwork ? (
-    //             <Button
-    //               onClick={() => networkRedirect(supportedNetwork.url)}
-    //               className={classes.button}
-    //             >
-    //               {t('Network-GoToApp', { network: supportedNetwork.name })}
-    //             </Button>
-    //           ) : null}
-    //           <Button onClick={disconnectWallet} className={classes.button}>
-    //             {t('Network-DisconnectWallet')}
-    //           </Button>
-    //         </div>
-    //         <div className={classes.note}>
-    //           <h3>{t('Network-SwitchInstruction', { network: targetNetworkFriendlyName })}</h3>
-    //         </div>
-    //         {/* {networkSetupError ? <div className={classes.error}>{networkSetupError}</div> : ''} */}
-    //       </>
-    //     );
-    //   }
+  } else if (!isCorrectNetwork) {
+    var UA = navigator.userAgent;
+    const isiPhoneBrowser = /\b(BlackBerry|webOS|iPhone|IEMobile)\b/i.test(UA);
+    if (!isiPhoneBrowser) {
+      // if (true) {
+      notice = (
+        <>
+          <div className={classes.message}>
+            {t('Network-Supports', { network: targetNetworkFriendlyName })}{' '}
+            {isSupportedNetwork
+              ? t('Network-ConnectedTo', { network: supportedNetwork.name })
+              : t('Network-ConnectedUnsupported')}
+          </div>
+          <div className={classes.actions}>
+            <Button onClick={targetNetworkSetup} className={classes.button}>
+              {t('Network-SwitchToNetwork', { network: targetNetworkFriendlyName })}
+            </Button>
+            {isSupportedNetwork ? (
+              <Button
+                onClick={() => networkRedirect(supportedNetwork.url)}
+                className={classes.button}
+              >
+                {t('Network-GoToApp', { network: supportedNetwork.name })}
+              </Button>
+            ) : null}
+            <Button onClick={disconnectWallet} className={classes.button}>
+              {t('Network-DisconnectWallet')}
+            </Button>
+          </div>
+          <div className={classes.note}>{t('Network-SwitchNote')}</div>
+          {/* {networkSetupError ? <div className={classes.error}>{networkSetupError}</div> : ''} */}
+        </>
+      );
+    } else {
+      alert(`Please switch to ${targetNetworkFriendlyName} network.`);
+      notice = (
+        <>
+          <div className={classes.message}>
+            {t('Network-Supports', { network: targetNetworkFriendlyName })}{' '}
+            {isSupportedNetwork
+              ? t('Network-ConnectedTo', { network: supportedNetwork.name })
+              : t('Network-ConnectedUnsupported')}
+          </div>
+          {/* <div className={classes.actions}>
+              <Button onClick={targetNetworkSetup} className={classes.button}>
+                {t('Network-SwitchToNetwork', { network: targetNetworkFriendlyName })}
+              </Button>
+              {isSupportedNetwork ? (
+                <Button
+                  onClick={() => networkRedirect(supportedNetwork.url)}
+                  className={classes.button}
+                >
+                  {t('Network-GoToApp', { network: supportedNetwork.name })}
+                </Button>
+              ) : null}
+              <Button onClick={disconnectWallet} className={classes.button}>
+                {t('Network-DisconnectWallet')}
+              </Button>
+            </div> */}
+          <div className={classes.message}>
+            {t('Network-ConnectionRequired', { network: targetNetworkFriendlyName })}
+          </div>
+          <div className={classes.actions}>
+            <Button onClick={connectWallet} className={classes.button}>
+              {t('Network-ConnectWallet')}
+            </Button>
+          </div>
+          <div className={classes.actions}>
+            {/* <Button onClick={targetNetworkSetup} className={classes.button}>
+                {t('Network-SwitchToNetwork', { network: targetNetworkFriendlyName })}
+              </Button> */}
+            {isSupportedNetwork ? (
+              <Button
+                onClick={() => networkRedirect(supportedNetwork.url)}
+                className={classes.button}
+              >
+                {t('Network-GoToApp', { network: supportedNetwork.name })}
+              </Button>
+            ) : null}
+            <Button onClick={disconnectWallet} className={classes.button}>
+              {t('Network-DisconnectWallet')}
+            </Button>
+          </div>
+          <div className={classes.note}>
+            <h3>{t('Network-SwitchInstruction', { network: targetNetworkFriendlyName })}</h3>
+          </div>
+          {/* {networkSetupError ? <div className={classes.error}>{networkSetupError}</div> : ''} */}
+        </>
+      );
+    }
   } else if (!haveAddress) {
     notice = (
       <>
