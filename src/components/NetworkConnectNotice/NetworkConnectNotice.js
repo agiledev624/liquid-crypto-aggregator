@@ -67,7 +67,7 @@ export function NetworkConnectNotice({
 
   // if (!isCorrectNetwork) alert(`Please switch to ${targetNetworkFriendlyName} network.`);
 
-  if (!haveConnection || !isCorrectNetwork) {
+  if (!haveConnection) {
     notice = (
       <>
         <div className={classes.message}>
