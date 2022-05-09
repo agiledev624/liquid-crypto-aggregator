@@ -96,7 +96,7 @@ const DailyBreakdownTooltip = memo(({ rates }) => {
 const LabeledStatWithTooltip = memo(({ tooltip, label, ...passthrough }) => {
   const classes = useStyles();
 
-  return tooltip ? (
+  return false ? (
     <Tooltip
       arrow
       TransitionComponent={Fade}
@@ -109,7 +109,8 @@ const LabeledStatWithTooltip = memo(({ tooltip, label, ...passthrough }) => {
       <LabeledStat
         label={
           <>
-            {label} <i className="fas fa-info-circle" />
+            {label}
+            <i className="fas fa-info-circle" />
           </>
         }
         {...passthrough}
