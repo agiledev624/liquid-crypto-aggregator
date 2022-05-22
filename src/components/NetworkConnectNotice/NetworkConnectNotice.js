@@ -35,19 +35,21 @@ export function NetworkConnectNotice({
   const targetNetworkSetup = useCallback(() => {
     setNetworkSetupError(null);
 
-    networkSetup(targetNetworkId)
-      .then(() => {
-        setNetworkSetupError(null);
-      })
-      .catch(e => {
-        if (typeof e === 'object' && typeof e.message === 'string') {
-          setNetworkSetupError(e.message);
-        } else if (typeof e === 'string') {
-          setNetworkSetupError(e);
-        } else {
-          setNetworkSetupError(t('Network-UnknownError'));
-        }
-      });
+    // networkSetup(targetNetworkId)
+    //   .then(() => {
+    //     setNetworkSetupError(null);
+    //   })
+    //   .catch(e => {
+    //     if (typeof e === 'object' && typeof e.message === 'string') {
+    //       setNetworkSetupError(e.message);
+    //     } else if (typeof e === 'string') {
+    //       setNetworkSetupError(e);
+    //     } else {
+    //       setNetworkSetupError(t('Network-UnknownError'));
+    //     }
+    //   });
+
+    networkSetup(targetNetworkId);
   }, [setNetworkSetupError, t]);
 
   const networkRedirect = url => {

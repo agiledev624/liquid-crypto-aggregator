@@ -43,3 +43,26 @@ export const shouldHideFromHarvest = vaultName => {
 //   'fortube-btcb',
 //   'fry-burger-v2',
 // ];
+export async function switchChain(chain, successCb, errorCb) {
+  const chainId = `0x${(parseInt(chain.chainId)).toString(16)}`
+  try {
+    await window.ethereum.request({
+      method: 'wallet_switchEthereumChain',
+      params: [{ chainId }],
+    })
+    successCb && successCb()
+  } catch (error) {
+    if (error.code === 4902) {
+      try {
+        await window.ethereum.request({
+          method: 'wallet_addEthereumChain',
+          params: [{ chainId, ...chain.metamask }],
+        });
+      } catch (addError) {
+        console.error('err', addError)
+      }
+    } else if (error.code === 4001) {
+      errorCb && errorCb(40001)
+    }
+  }
+}

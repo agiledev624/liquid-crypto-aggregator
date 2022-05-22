@@ -15,7 +15,7 @@ import useNightMode from './hooks/useNightMode';
 import createThemeMode from './jss/appTheme';
 import { useLocation } from 'react-router';
 import { getNetworkFriendlyName } from 'features/helpers/getNetworkData.js';
-
+// import { useWallet } from 'use-wallet'
 const themes = { light: null, dark: null };
 const getTheme = mode => {
   return (themes[mode] = themes[mode] || createThemeMode(mode === 'dark'));
@@ -34,6 +34,13 @@ const ScrollToTop = memo(function () {
 export default function App({ children }) {
   const { t } = useTranslation();
   const { connectWallet, web3, address, networkId, connected } = useConnectWallet();
+  // const wallet = useWallet();
+  // const connectWallet = useCallback(() => {
+  //   if (!wallet.isConnected()) {
+  //     wallet.connect();
+  //   }
+
+  // }, [wallet])
   const { disconnectWallet } = useDisconnectWallet();
   const [web3Modal, setModal] = useState(null);
 

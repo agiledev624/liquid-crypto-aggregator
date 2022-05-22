@@ -1,3 +1,4 @@
+import {switchNetwork} from '../features/helpers/utils'
 export const networkSettings = {
   56: {
     chainId: `0x${parseInt(56, 10).toString(16)}`,
@@ -156,29 +157,30 @@ export const networkSettings = {
   },
 };
 
-export const networkSetup = chainId => {
-  return new Promise((resolve, reject) => {
+export const networkSetup = async chainId => {
+  // return new Promise((resolve, reject) => {
     const provider = window.ethereum;
     if (provider) {
       if (networkSettings.hasOwnProperty(chainId)) {
         try {
-          provider
+          await provider
             .request({
               method: 'wallet_switchEthereumChain',
               params: [{ chainId: networkSettings[chainId].chainId }],
             })
-            .then(resolve);
+            // .then(resolve);
         } catch (switchError) {
           console.log(switchError);
           // if (switchError.code === 4902) {
           try {
-            provider
+            await provider
               .request({
                 method: 'wallet_addEthereumChain',
                 params: [networkSettings[chainId]],
               })
-              .then(resolve)
-              .catch(reject);
+              // .then(resolve)
+              // .catch(reject);
+
             // await ethereum.request({
             //   method: 'wallet_addEthereumChain',
             //   params: [{ chainId: '0xf00', rpcUrl: 'https://...' /* ... */ }],
@@ -190,12 +192,12 @@ export const networkSetup = chainId => {
           // handle other "switch" errors
         }
       } else {
-        reject(new Error(`No network settings configured for chainId: '${chainId}'`));
+        alert(new Error(`No network settings configured for chainId: '${chainId}'`));
       }
     } else {
-      reject(new Error(`window.ethereum is '${typeof provider}'`));
+      alert(new Error(`window.ethereum is '${typeof provider}'`));
     }
-  });
+  // });
 };
 
 export const getRpcUrl = () => {
