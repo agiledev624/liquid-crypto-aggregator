@@ -46,7 +46,6 @@
     "redux-thunk": "^2.3.0",
     "sass": "^1.43.4",
     "use-deep-compare-effect": "^1.6.1",
-    "use-wallet": "^0.13.6",
     "web3": "1.2.11",
     "web3modal": "^1.9.1"
   },
