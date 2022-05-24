@@ -32,7 +32,7 @@ export function NetworkConnectNotice({
   //   }
   // }, []);
 
-  const targetNetworkSetup = useCallback(() => {
+  const targetNetworkSetup = useCallback(async () => {
     setNetworkSetupError(null);
 
     // networkSetup(targetNetworkId)
@@ -49,7 +49,8 @@ export function NetworkConnectNotice({
     //     }
     //   });
 
-    networkSetup(targetNetworkId);
+    await networkSetup(targetNetworkId);
+    alert('network setup was confirmed');
   }, [setNetworkSetupError, t]);
 
   const networkRedirect = url => {
