@@ -85,8 +85,8 @@ export function NetworkConnectNotice({
   } else if (!isCorrectNetwork) {
     var UA = navigator.userAgent;
     const isiPhoneBrowser = /\b(BlackBerry|webOS|iPhone|IEMobile)\b/i.test(UA);
-    if (!isiPhoneBrowser) {
-      // if (true) {
+    // if (!isiPhoneBrowser) {
+    if (true) {
       notice = (
         <>
           <div className={classes.message}>
